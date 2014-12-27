@@ -1,0 +1,4 @@
+---
+- hosts: osx-dev-machine
+  roles:
+    - homebrew
