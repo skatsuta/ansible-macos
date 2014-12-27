@@ -1,4 +1,81 @@
 ---
 homebrew_packages:
   - ansible
+  - apache-spark
+  - bash
+  - brew-cask
+  - coreutils
+  - ctags
+  - fontconfig
+  - freetype
+  - gcc
+  - gettext
+  - ghc
+  - git
+  - git-flow
+  - gnu-sed
+  - go
+  - gradle
+  - httpie
+  - hub
+  - llvm
+  - lua
+  - macvim
+  - nasm
+  - nkf
+  - node
+  - openssl
+  - python3
+  - rbenv
+  - readline
+  - redis
+  - rsync
+  - ruby
+  - ruby-build
+  - scala
+  - terminal-notifier
+  - the_platinum_searcher
+  - the_silver_searcher
+  - tig
+  - tmux
+  - tree
+  - typesafe-activator
+  - vim
+  - wget
+
+homebrew_repos:
+  - homebrew/dupes
+
+homebrew_cask_packages:
+  - adobe-reader
+  - alfred
+  - appcleaner
+  - boot2docker
+  - disk-inventory-x
+  - dropbox
+  - evernote
+  - freefilesync
+  - genymotion
+  - google-chrome
+  - google-drive
+  - hex-fiend
+  - intellij-idea-ce
+  - iterm2
+  - java
+  - karabiner
+  - kobito
+  - macdown
+  - miro-video-converter
+  - mysqlworkbench
+  - sdformatter
+  - simple-comic
+  - skype
+  - sublime-text3
+  - the-unarchiver
+  - tribler
+  - tunnelblick
+  - utorrent
+  - vagrant
+  - virtualbox
+  - vlc
 

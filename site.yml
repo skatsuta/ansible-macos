@@ -1,4 +1,5 @@
 ---
 - hosts: osx-dev-machine
   roles:
-    - homebrew
+    - role: homebrew
+      tags: homebrew

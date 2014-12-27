@@ -1,5 +1,20 @@
 ---
+- name: Update Homebrew itself
+  homebrew: update_homebrew=yes
+  tags: homebrew-update
+
+- name: Tap extra repositories
+  homebrew_tap: tap={{ item }} state=present
+  with_items: homebrew_repos
+  tags: homebrew-tap
+
 - name: Install Homebrew packages
   homebrew: name={{ item }} state=latest
   with_items: homebrew_packages
+  tags: homebrew-install
+
+- name: Install Homebrew Cask packages
+  homebrew_cask: name={{ item }} state=present
+  with_items: homebrew_cask_packages
+  tags: homebrew-cask-install
 
