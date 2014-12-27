@@ -3,3 +3,5 @@
   roles:
     - role: homebrew
       tags: homebrew
+    - role: ruby
+      tags: ruby

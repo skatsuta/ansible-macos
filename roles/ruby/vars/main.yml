@@ -1,0 +1,6 @@
+---
+gems:
+  - ansible_tools
+  - bundler
+  - rake
+
