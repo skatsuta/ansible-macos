@@ -1,0 +1,4 @@
+---
+- name: Install plugins
+  command: vagrant plugin install {{ item }}
+  with_items: plugins

@@ -1,0 +1,4 @@
+---
+plugins:
+  - vagrant-vbguest
+

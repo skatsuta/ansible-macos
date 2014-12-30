@@ -9,4 +9,6 @@
       tags: zsh
     - role: ruby
       tags: ruby
+    - role: vagrant
+      tags: vagrant
 
