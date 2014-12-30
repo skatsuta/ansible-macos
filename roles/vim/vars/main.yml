@@ -1,0 +1,7 @@
+---
+vim_home: ~/.vim
+
+# vimproc
+vimproc_home: ~/.vim/plugged/vimproc.vim
+vimproc_so: vimproc_mac.so
+

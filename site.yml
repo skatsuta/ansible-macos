@@ -5,3 +5,6 @@
       tags: homebrew
     - role: ruby
       tags: ruby
+    - role: vim
+      tags: vim
+
