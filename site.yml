@@ -3,8 +3,10 @@
   roles:
     - role: homebrew
       tags: homebrew
-    - role: ruby
-      tags: ruby
     - role: vim
       tags: vim
+    - role: zsh
+      tags: zsh
+    - role: ruby
+      tags: ruby
 

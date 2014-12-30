@@ -1,0 +1,32 @@
+---
+- name: Install zaw
+  git:
+    repo=ssh://git@github.com/zsh-users/zaw.git
+    dest={{ zsh_home }}/zaw
+  tags: zsh-zaw
+
+- name: Install zsh-notify
+  git:
+    repo=ssh://git@github.com/marzocchi/zsh-notify.git
+    dest={{ zsh_home }}/zsh-notify
+  tags: zsh-notify
+
+#- name: Create a directory for imcremental completion on zsh
+#  file:
+#    path={{ zsh_home }}/incr
+#    state=directory
+#  tags: zsh-incr
+#
+#- name: Install imcremental completion on zsh
+#  get_url:
+#    url=http://mimosa-pudica.net/src/incr-0.2.zsh
+#    dest={{ zsh_home }}/incr/incr-0.2.zsh
+#  tags: zsh-incr
+
+- name: Create .zshrc
+  template:
+    src=.zshrc.j2
+    dest=~/.zshrc
+  notify: Reload .zshrc
+  tags: zsh-zshrc
+
