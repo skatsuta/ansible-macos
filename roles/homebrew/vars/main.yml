@@ -26,6 +26,7 @@ homebrew_packages:
   - nkf
   - node
   - openssl
+  - python
   - python3
   - rbenv
   - readline
