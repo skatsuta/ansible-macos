@@ -2,6 +2,7 @@
 homebrew_packages:
   - ansible
   - apache-spark
+  - autojump
   - bash
   - brew-cask
   - coreutils
@@ -42,6 +43,7 @@ homebrew_packages:
   - typesafe-activator
   - vim
   - wget
+  - zsh
 
 homebrew_repos:
   - homebrew/dupes
