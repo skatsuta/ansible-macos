@@ -1,6 +1,8 @@
 ---
 - hosts: osx-dev-machine
   roles:
+    - role: ssh
+      tags: ssh
     - role: homebrew
       tags: homebrew
     - role: vim
