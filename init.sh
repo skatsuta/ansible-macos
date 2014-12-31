@@ -1,40 +1,74 @@
-# Install Xcode
-echo "Install Xcode..."
-xcode-select --install
+#!/bin/bash
 
+############### README ###############
+#
+# Before running this script,
+# you should do the following things:
+#
+# 1. run "ssh-keygen" to generate your SSH key
+# 2. add the key to GitHub
+#
+######################################
+
+# Variables
+USER=skatsuta
+REPO=ansible-osx
+DEST=${HOME}/repos
+
+# Install Xcode
+install_xcode() {
+  echo "Install Xcode..."
+  echo "*** Please download Xcode before proceeding! ***"
+  xcode-select --install
+  sudo xcodebuild -license
+}
 
 # Install Homebrew
-if [[ -f /usr/local/bin/brew ]]; then
-  echo "Homebrew is already installed."
-else
-  echo "Install Homebrew..."
-  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-fi
+install_homebrew() {
+  if [[ -f /usr/local/bin/brew ]]; then
+    echo "Homebrew is already installed."
+  else
+    echo "Install Homebrew..."
+    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  fi
 
+  brew doctor
+}
 
 # Install apps for running Ansible playbook
-echo "Install apps for running Ansible playbook..."
-brew install python
-brew install ansible
-brew install git
-
+install_apps_for_ansible() {
+  echo "Install apps for running Ansible..."
+  brew install git python ansible
+}
 
 # Clone my GitHub repository
-DEST=~/Git
-REPO=ansible-osx
-USER=skatsuta
-mkdir -p $DEST
-cd $DEST
-if [[ -d $DEST/$REPO ]]; then
-  echo "Repository is already cloned."
-else
-  echo "Clone my GitHub repository..."
-  git clone https://github.com/${USER}/${REPO}.git
-fi
+clone_repo() {
+  mkdir -p $DEST
+  cd $DEST
 
+  if [[ -d $DEST/$REPO ]]; then
+    echo "Repository is already cloned."
+  else
+    echo "Clone ${USER}/${REPO}..."
+    git clone git@github.com:${USER}/${REPO}.git
+  fi
+}
 
 # Provision
-cd $DEST/ansible-osx
-echo "Provision my machine in `pwd`"
-ansible-playbook site.yml --skip-tags=homebrew,ruby,vagrant
+provision() {
+  cd ${DEST}/${REPO}
+  echo "Start provisioning..."
+  ansible-playbook site.yml
+}
+
+# Run the above functions
+run() {
+  install_xcode
+  install_homebrew
+  install_apps_for_ansible
+  clone_repo
+  provision
+}
+
+run
 
