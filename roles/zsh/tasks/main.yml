@@ -23,9 +23,22 @@
 #    dest={{ zsh_home }}/incr/incr-0.2.zsh
 #  tags: zsh-incr
 
-- name: Create .zshrc
+- name: Install Prezto
+  git:
+    repo=ssh://git@github.com/sorin-ionescu/prezto.git
+    dest=~/.zprezto
+    recursive=yes
+
+- name: Create symlinks to zsh config files
+  file:
+    src={{ prezto_home }}/runcoms/{{ item }}
+    dest=~/.{{ item }}
+    state=link
+  with_items: prezto_config_files
+
+- name: Deploy .zshrc
   template:
-    src=.zshrc.j2
+    src=zshrc.j2
     dest=~/.zshrc
   notify: Reload .zshrc
   tags: zsh-zshrc

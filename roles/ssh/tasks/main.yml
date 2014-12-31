@@ -1,5 +1,0 @@
----
-- name: Generate a public key
-  command: ssh-keygen
-    creates=~/.ssh/id_rsa
-

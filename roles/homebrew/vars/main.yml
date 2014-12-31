@@ -19,9 +19,9 @@ homebrew_packages:
   - gradle
   - httpie
   - hub
+  - icdiff
   - llvm
   - lua
-  - macvim
   - nasm
   - nkf
   - node
@@ -42,12 +42,12 @@ homebrew_packages:
   - tmux
   - tree
   - typesafe-activator
-  - vim
   - wget
   - zsh
 
 homebrew_repos:
   - homebrew/dupes
+  - caskroom/cask
 
 homebrew_cask_packages:
   - adobe-reader
@@ -61,6 +61,7 @@ homebrew_cask_packages:
   - genymotion
   - google-chrome
   - google-drive
+  - google-japanese-ime
   - hex-fiend
   - intellij-idea-ce
   - iterm2
@@ -68,12 +69,13 @@ homebrew_cask_packages:
   - karabiner
   - kobito
   - macdown
+  - macvim
   - miro-video-converter
   - mysqlworkbench
   - sdformatter
   - simple-comic
   - skype
-  - sublime-text3
+  - sublime-text
   - the-unarchiver
   - tribler
   - tunnelblick

@@ -13,8 +13,29 @@
   with_items: homebrew_packages
   tags: homebrew-install
 
+- name: Install Lua-enabled Vim
+  homebrew: name=vim state=latest install_options=with-lua
+  tags: homebrew-vim
+
 - name: Install Homebrew Cask packages
   homebrew_cask: name={{ item }} state=present
   with_items: homebrew_cask_packages
   tags: homebrew-cask-install
 
+- name: Link apps to Alfred
+  command: brew cask alfred link
+  tags: homebrew-post-install
+
+- name: Check the default shell
+  command: echo $SHELL
+  register: shell
+  tags: homebrew-post-install
+
+- name: Set default shell to zsh
+  command: chsh -s /bin/zsh
+  when: shell != '/bin/zsh'
+  tags: homebrew-post-install
+
+- name: Execute zsh
+  shell: exec zsh
+  tags: homebrew-post-install

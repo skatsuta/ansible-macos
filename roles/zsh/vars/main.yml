@@ -1,3 +1,11 @@
 ---
 zsh_home: ~/.zsh
 
+prezto_home: ~/.zprezto
+prezto_config_files:
+  - zlogin
+  - zlogout
+  - zpreztorc
+  - zprofile
+  - zshenv
+
