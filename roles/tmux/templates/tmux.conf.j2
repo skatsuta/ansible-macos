@@ -1,0 +1,45 @@
+# See: http://qiita.com/succi0303/items/cb396704493476373edf
+
+# prefix キーを C-t に変更する
+set -g prefix C-t
+
+# C-bのキーバインドを解除する
+unbind C-b
+
+# キーストロークのディレイを減らす
+set -sg escape-time 1
+
+# 設定ファイルをリロードする
+bind r source-file ~/.tmux.conf \; display "Reloaded!"
+
+# C-t*2でtmux内のプログラムにC-tを送る
+bind C-t send-prefix
+
+# | でペインを立てに分割する
+bind | split-window -h
+
+# - でペインを横に分割する
+bind - split-window -v
+
+# キーバインディングを vi モードにする
+set-window-option -g mode-keys vi
+
+# s/S で synchronize-panes の on/off
+bind s setw synchronize-panes on
+bind S setw synchronize-panes off
+
+# ペイン間の移動
+## Vim-like
+bind h select-pane -L
+bind j select-pane -D
+bind k select-pane -U
+bind l select-pane -R
+## 矢印
+bind -n S-left select-pane -L
+bind -n S-down select-pane -D
+bind -n S-up select-pane -U
+bind -n S-right select-pane -R
+
+# Yosemite での Terminal-notifier のハングアップ防止
+set-option -g default-command "reattach-to-user-namespace -l zsh"
+

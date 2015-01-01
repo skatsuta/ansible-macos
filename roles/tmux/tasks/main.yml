@@ -1,0 +1,12 @@
+---
+- name: Install Tmux
+  homebrew: name=tmux state=latest
+  tags: tmux-install
+
+- name: Deploy .tmux.conf to $HOME
+  template:
+    src=tmux.conf.j2
+    dest=~/.tmux.conf
+  notify: Reload .tmux.conf
+  tags: tmux-conf
+

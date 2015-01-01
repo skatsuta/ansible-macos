@@ -1,0 +1,4 @@
+---
+- name: Reload .tmux.conf
+  command: tmux source-file ~/.tmux.conf
+

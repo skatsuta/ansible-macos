@@ -5,10 +5,12 @@
       tags: git
     - role: homebrew
       tags: homebrew
-    - role: vim
-      tags: vim
     - role: zsh
       tags: zsh
+    - role: tmux
+      tags: tmux
+    - role: vim
+      tags: vim
     - role: ruby
       tags: ruby
     - role: vagrant
