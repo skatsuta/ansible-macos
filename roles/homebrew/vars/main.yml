@@ -30,6 +30,7 @@ homebrew_packages:
   - python3
   - rbenv
   - readline
+  - reattach-to-user-namespace
   - redis
   - rsync
   - ruby
