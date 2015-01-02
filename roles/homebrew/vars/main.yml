@@ -35,7 +35,6 @@ homebrew_packages:
   - scala
   - ssh-copy-id
   - terminal-notifier
-  - the_platinum_searcher
   - the_silver_searcher
   - tig
   - tmux
