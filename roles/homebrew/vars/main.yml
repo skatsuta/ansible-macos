@@ -1,10 +1,10 @@
 ---
 homebrew_packages:
   - ansible
-  - apache-spark
   - autojump
   - bash
   - brew-cask
+  - cabal-install
   - coreutils
   - ctags
   - fontconfig
@@ -16,18 +16,15 @@ homebrew_packages:
   - git-flow
   - gnu-sed
   - go
-  - gradle
   - httpie
   - hub
   - icdiff
   - llvm
-  - lua
   - nasm
   - nkf
   - node
   - openssl
   - python
-  - python3
   - rbenv
   - readline
   - reattach-to-user-namespace
@@ -36,6 +33,7 @@ homebrew_packages:
   - ruby
   - ruby-build
   - scala
+  - ssh-copy-id
   - terminal-notifier
   - the_platinum_searcher
   - the_silver_searcher
@@ -54,12 +52,9 @@ homebrew_cask_packages:
   - adobe-reader
   - alfred
   - appcleaner
-  - boot2docker
   - disk-inventory-x
   - dropbox
   - evernote
-  - freefilesync
-  - genymotion
   - google-chrome
   - google-drive
   - google-japanese-ime
@@ -72,15 +67,12 @@ homebrew_cask_packages:
   - macdown
   - macvim
   - miro-video-converter
-  - mysqlworkbench
   - sdformatter
   - simple-comic
   - skype
   - sublime-text
   - the-unarchiver
-  - tribler
   - tunnelblick
-  - utorrent
   - vagrant
   - virtualbox
   - vlc
