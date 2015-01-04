@@ -10,15 +10,23 @@
 #
 ######################################
 
-# Variables
+
+# Configurations
 USER=skatsuta
 REPO=ansible-osx
 DEST=${HOME}/repos
 
+
 # Install Xcode
 install_xcode() {
+  if [[ -d /Library/Developer/CommandLineTools ]]; then
+    echo "Xcode is already installed."
+    return
+  fi
+
   echo "Install Xcode..."
-  echo "*** Please download Xcode before proceeding! ***"
+  echo "*** If a dialog is shown,\
+    push 'Get Xcode' button to download Xcode before proceeding! ***"
   xcode-select --install
   sudo xcodebuild -license
 }
@@ -27,31 +35,34 @@ install_xcode() {
 install_homebrew() {
   if [[ -f /usr/local/bin/brew ]]; then
     echo "Homebrew is already installed."
-  else
-    echo "Install Homebrew..."
-    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    return
   fi
 
+  echo "Install Homebrew..."
+  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+  echo "Run 'brew doctor'..."
   brew doctor
 }
 
-# Install apps for running Ansible playbook
-install_apps_for_ansible() {
-  echo "Install apps for running Ansible..."
+# Install packages for running Ansible playbook
+install_packages_for_ansible() {
+  echo "Install packages for running Ansible..."
   brew install git python ansible
 }
 
 # Clone my GitHub repository
 clone_repo() {
+  if [[ -d ${DEST}/${REPO} ]]; then
+    echo "Repository is already cloned."
+    return
+  fi
+
   mkdir -p $DEST
   cd $DEST
 
-  if [[ -d $DEST/$REPO ]]; then
-    echo "Repository is already cloned."
-  else
-    echo "Clone ${USER}/${REPO}..."
-    git clone git@github.com:${USER}/${REPO}.git
-  fi
+  echo "Clone ${USER}/${REPO}..."
+  git clone git@github.com:${USER}/${REPO}.git
 }
 
 # Provision
@@ -65,7 +76,7 @@ provision() {
 run() {
   install_xcode
   install_homebrew
-  install_apps_for_ansible
+  install_packages_for_ansible
   clone_repo
   provision
 }
