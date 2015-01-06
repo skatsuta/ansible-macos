@@ -20,6 +20,7 @@ homebrew_packages:
   - hub
   - icdiff
   - llvm
+  - mysql
   - nasm
   - nkf
   - node
