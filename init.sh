@@ -27,8 +27,8 @@ install_xcode() {
   echo "Install Xcode..."
   echo "*** If a dialog is shown,\
     push 'Get Xcode' button to download Xcode before proceeding! ***"
-  xcode-select --install
   sudo xcodebuild -license
+  xcode-select --install
 }
 
 # Install Homebrew
