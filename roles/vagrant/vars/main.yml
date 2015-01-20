@@ -1,4 +1,5 @@
 ---
 plugins:
   - vagrant-vbguest
+  - sahara
 
