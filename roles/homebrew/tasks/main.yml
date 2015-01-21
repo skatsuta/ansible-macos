@@ -13,10 +13,6 @@
   with_items: homebrew_packages
   tags: homebrew-install
 
-- name: Install Lua-enabled Vim
-  homebrew: name=vim state=latest install_options=with-lua
-  tags: homebrew-vim
-
 - name: Install Homebrew Cask packages
   homebrew_cask: name={{ item }} state=present
   with_items: homebrew_cask_packages

@@ -1,20 +1,33 @@
 ---
+- name: install Lua-enabled Vim via Homebrew
+  homebrew:
+    name=vim
+    state=latest
+    install_options=with-lua
+  tags: vim-install
+
+# install Vim-Plug
 - name: create autoload directory
   file:
     path={{ vim_home }}/autoload
     state=directory
+  tags: vim-install-plug
 
 - name: install Vim-Plug
   get_url:
     url=https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
     dest={{ vim_home }}/autoload/plug.vim
+  tags: vim-install-plug
 
 # Build vimproc.vim if the plugin directory exists
 - stat: path={{ vimproc_home }}
   register: st
+  tags: vim-build-vimproc
+
 - name: Build vimproc
   command: make
     chdir={{ vimproc_home }}
     creates={{ vimproc_home }}/autoload/{{ vimproc_so }}
   when: st.stat.exists == True
+  tags: vim-build-vimproc
 
