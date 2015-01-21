@@ -7,10 +7,15 @@ dotfiles:
   # Git
   - src:  gitconfig
     dest: ~/.gitconfig
-  # tmux
-  - src: tmux.conf
-    dest: ~/.tmux.conf
+  # zsh
+  - src:  zsh/zshrc
+    dest: ~/.zshrc
+  - src:  zsh/zpreztorc
+    dest: ~/.zpreztorc
   # Vim
-  - src: vimrc
+  - src:  vimrc
     dest: ~/.vimrc
+  # tmux
+  - src:  tmux.conf
+    dest: ~/.tmux.conf
 
