@@ -7,10 +7,10 @@
       tags: zsh
     - role: vim
       tags: vim
+    - role: homebrew
+      tags: homebrew
     - role: ruby
       tags: ruby
     - role: vagrant
       tags: vagrant
-    - role: homebrew
-      tags: homebrew
 
