@@ -1,9 +1,18 @@
 ---
-- name: Install Git via Homebrew
+- name: install Git via Homebrew
   homebrew: name=git state=latest
   tags: git-install
 
-- name: Deploy .gitconfig to $HOME
-  template: src=gitconfig.j2 dest=~/.gitconfig
-  tags: git-gitconfig
+- name: clone dotfiles repo
+  git: >
+    repo=ssh://git@github.com/{{ git_dotfiles.repo }}.git
+    dest={{ git_dotfiles.dir }}
+  tags: git-clone-dotfiles
+
+- name: deploy symlink of .gitconfig on $HOME
+  file: >
+    src={{ git_config.src }}
+    dest={{ git_config.dest }}
+    state=link
+  tags: git-deploy-gitconfig
 

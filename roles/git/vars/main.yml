@@ -1,0 +1,9 @@
+---
+git_dotfiles:
+  repo: skatsuta/dotfiles
+  dir:  ~/repos/dotfiles
+
+git_config:
+  src:  ~/repos/dotfiles/git/gitconfig
+  dest: ~/.gitconfig
+
