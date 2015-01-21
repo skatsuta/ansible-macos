@@ -1,5 +1,10 @@
 ---
-- name: Install Gems
+- name: install Ruby
+  homebrew: name=ruby state=latest
+  tags: ruby-install
+
+- name: install Gems
   gem: name={{ item }} state=latest
   with_items: gems
-  tags: ruby-install
+  tags: ruby-gem-install
+
