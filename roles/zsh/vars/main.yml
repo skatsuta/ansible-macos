@@ -7,7 +7,4 @@ zsh_prezto_config_files:
   - zlogout
   - zprofile
   - zshenv
-zsh_prezto_deploy_files:
-  - zshrc
-  - zpreztorc
 
