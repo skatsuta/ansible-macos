@@ -1,8 +1,6 @@
 ---
 - hosts: osx-dev-machine
   roles:
-    - role: git
-      tags: git
     - role: dotfiles
       tags: dotfiles
     - role: zsh
