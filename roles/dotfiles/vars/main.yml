@@ -10,4 +10,7 @@ dotfiles:
   # tmux
   - src: tmux.conf
     dest: ~/.tmux.conf
+  # Vim
+  - src: vimrc
+    dest: ~/.vimrc
 
