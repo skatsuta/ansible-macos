@@ -3,8 +3,8 @@
   roles:
     - role: git
       tags: git
-    - role: homebrew
-      tags: homebrew
+    - role: dotfiles
+      tags: dotfiles
     - role: zsh
       tags: zsh
     - role: tmux
@@ -15,4 +15,6 @@
       tags: ruby
     - role: vagrant
       tags: vagrant
+    - role: homebrew
+      tags: homebrew
 
