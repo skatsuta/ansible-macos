@@ -86,9 +86,16 @@ clone_repo() {
 
 # Provision
 provision() {
-  cd ${DEST}/${REPO}
-  echo "Start provisioning..."
-  ansible-playbook site.yml
+  #cd ${DEST}/${REPO}
+  #echo "Start provisioning..."
+  #ansible-playbook site.yml
+
+  local dir="${DEST}/${REPO}"
+  echo "Initialization has completed successfully."
+  echo "To start provisioning, run"
+  echo
+  echo "  \$ cd ~/repos/${REPO}"
+  echo '  $ ansible-playbook site.yml'
 }
 
 # Run the above functions
