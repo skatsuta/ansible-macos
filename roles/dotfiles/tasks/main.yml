@@ -1,0 +1,15 @@
+---
+- name: clone dotfiles repo
+  git:
+    repo=ssh://git@github.com/{{ dotfiles_repo }}.git
+    dest={{ dotfiles_dir }}
+  tags: dotfiles-clone
+
+- name: deploy each symlink of dotfiles on $HOME
+  file:
+    src={{ dotfiles_dir}}/{{ item.src }}
+    dest={{ item.dest }}
+    state=link
+  with_items: dotfiles
+  tags: dotfiles-symlink
+

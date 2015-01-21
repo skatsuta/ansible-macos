@@ -1,4 +1,10 @@
 ---
-- name: Install plugins
+- name: install Vagrant via Hombrew Cask
+  homebrew_cask: name=vagrant state=installed
+  tags: vagrant-install
+
+- name: install plugins
   command: vagrant plugin install {{ item }}
-  with_items: plugins
+  with_items: vagrant_plugins
+  tags: vagrant-plugins
+

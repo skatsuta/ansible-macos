@@ -1,21 +1,40 @@
 #!/bin/bash
 
-############### README ###############
-#
-# Before running this script,
-# you should do the following things:
-#
-# 1. run "ssh-keygen" to generate your SSH key
-# 2. add the key to GitHub
-#
-######################################
-
 
 # Configurations
 USER=skatsuta
 REPO=ansible-osx
 DEST=${HOME}/repos
 
+
+# Generate SSH Key
+generate_ssh_key() {
+  if [[ -f ~/.ssh/id_rsa ]]; then
+    echo "SSH key is already generated."
+    return
+  fi
+
+  echo "Generate SSH key..."
+  ssh-keygen
+}
+
+# Prompt the confirmation of adding the SSH key to GitHub
+prompt_confirmation() {
+  echo "You should add the generated key to GitHub before proceeding."
+  while true; do
+    read -p "Are you sure to proceed? [Yn] " yn
+    case $yn in
+      [Yy]*|'')
+        echo "Proceeding..."
+        break
+        ;;
+      [Nn]*)
+        echo "Stopped."
+        exit 1
+        ;;
+    esac
+  done
+}
 
 # Install Xcode
 install_xcode() {
@@ -27,8 +46,8 @@ install_xcode() {
   echo "Install Xcode..."
   echo "*** If a dialog is shown,\
     push 'Get Xcode' button to download Xcode before proceeding! ***"
-  xcode-select --install
   sudo xcodebuild -license
+  xcode-select --install
 }
 
 # Install Homebrew
@@ -67,13 +86,22 @@ clone_repo() {
 
 # Provision
 provision() {
-  cd ${DEST}/${REPO}
-  echo "Start provisioning..."
-  ansible-playbook site.yml
+  #cd ${DEST}/${REPO}
+  #echo "Start provisioning..."
+  #ansible-playbook site.yml
+
+  local dir="${DEST}/${REPO}"
+  echo "Initialization has completed successfully."
+  echo "To start provisioning, run"
+  echo
+  echo "  \$ cd ~/repos/${REPO}"
+  echo '  $ ansible-playbook site.yml'
 }
 
 # Run the above functions
 run() {
+  generate_ssh_key
+  prompt_confirmation
   install_xcode
   install_homebrew
   install_packages_for_ansible

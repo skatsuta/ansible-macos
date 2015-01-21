@@ -1,16 +1,14 @@
 ---
 - hosts: osx-dev-machine
   roles:
-    - role: git
-      tags: git
-    - role: homebrew
-      tags: homebrew
+    - role: dotfiles
+      tags: dotfiles
     - role: zsh
       tags: zsh
-    - role: tmux
-      tags: tmux
     - role: vim
       tags: vim
+    - role: homebrew
+      tags: homebrew
     - role: ruby
       tags: ruby
     - role: vagrant

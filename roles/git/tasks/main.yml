@@ -1,9 +1,0 @@
----
-- name: Install Git via Homebrew
-  homebrew: name=git state=latest
-  tags: git-install
-
-- name: Deploy .gitconfig to $HOME
-  template: src=gitconfig.j2 dest=~/.gitconfig
-  tags: git-gitconfig
-

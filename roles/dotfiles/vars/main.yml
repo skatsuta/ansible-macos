@@ -1,0 +1,21 @@
+---
+dotfiles_repo: skatsuta/dotfiles
+
+dotfiles_dir:  ~/repos/dotfiles
+
+dotfiles:
+  # Git
+  - src:  gitconfig
+    dest: ~/.gitconfig
+  # zsh
+  - src:  zsh/zshrc
+    dest: ~/.zshrc
+  - src:  zsh/zpreztorc
+    dest: ~/.zpreztorc
+  # Vim
+  - src:  vimrc
+    dest: ~/.vimrc
+  # tmux
+  - src:  tmux.conf
+    dest: ~/.tmux.conf
+
