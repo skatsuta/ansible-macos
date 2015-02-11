@@ -5,6 +5,7 @@ homebrew_packages:
   - bash
   - brew-cask
   - cabal-install
+  - colordiff
   - coreutils
   - ctags
   - fontconfig
