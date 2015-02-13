@@ -6,6 +6,7 @@ homebrew_packages:
   - boot2docker
   - brew-cask
   - cabal-install
+  - colordiff
   - coreutils
   - ctags
   - docker
@@ -51,6 +52,7 @@ homebrew_repos:
   - caskroom/cask
 
 homebrew_cask_packages:
+  - a-better-finder-rename
   - adobe-reader
   - alfred
   - appcleaner
