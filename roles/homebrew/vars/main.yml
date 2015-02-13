@@ -3,10 +3,12 @@ homebrew_packages:
   - ansible
   - autojump
   - bash
+  - boot2docker
   - brew-cask
   - cabal-install
   - coreutils
   - ctags
+  - docker
   - fontconfig
   - freetype
   - gcc
