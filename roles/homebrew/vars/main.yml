@@ -74,10 +74,11 @@ homebrew_cask_packages:
   - macvim
   - miro-video-converter
   - sdformatter
+  - sequel-pro
   - simple-comic
   - skype
   - slack
-  - sublime-text
+  - sublime-text3
   - the-unarchiver
   - tunnelblick
   - vagrant
