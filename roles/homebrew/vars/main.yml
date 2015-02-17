@@ -50,6 +50,7 @@ homebrew_packages:
 homebrew_repos:
   - homebrew/dupes
   - caskroom/cask
+  - caskroom/versions
 
 homebrew_cask_packages:
   - a-better-finder-rename
