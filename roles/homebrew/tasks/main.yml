@@ -18,8 +18,7 @@
   with_items: homebrew_cask_packages
   tags: homebrew-cask-install
 
-- name: Link apps to Alfred
-  command: brew cask alfred link
-  tags: homebrew-post-install
-
+#- name: Link apps to Alfred
+#  command: brew cask alfred link
+#  tags: homebrew-post-install
 
