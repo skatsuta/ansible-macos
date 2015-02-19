@@ -22,6 +22,7 @@ homebrew_packages:
   - httpie
   - hub
   - icdiff
+  - jq
   - llvm
   - mysql
   - nasm
