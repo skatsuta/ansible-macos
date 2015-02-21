@@ -1,0 +1,8 @@
+---
+- name: install Go with cross compilers via Homebrew
+  homebrew:
+    name=go
+    state=latest
+    install_options=with-cc-common
+  tags: go-install
+
