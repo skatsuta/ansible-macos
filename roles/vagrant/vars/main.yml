@@ -1,5 +1,5 @@
 ---
 vagrant_plugins:
-  - vagrant-vbguest
   - sahara
-
+  - vagrant-cachier
+  - vagrant-vbguest
