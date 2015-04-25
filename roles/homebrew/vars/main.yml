@@ -41,6 +41,7 @@ homebrew_packages:
   - ssh-copy-id
   - terminal-notifier
   - the_silver_searcher
+  - thefuck
   - tig
   - tmux
   - tree
