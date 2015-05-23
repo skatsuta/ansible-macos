@@ -11,7 +11,9 @@ homebrew_packages:
   - ctags
   - docker
   - fontconfig
+  - fpp
   - freetype
+  - fzf
   - gcc
   - gettext
   - ghc
