@@ -81,7 +81,6 @@ homebrew_cask_packages:
   - miro-video-converter
   - sdformatter
   - sequel-pro
-  - simple-comic
   - skype
   - slack
   - sublime-text3
@@ -90,4 +89,3 @@ homebrew_cask_packages:
   - vagrant
   - virtualbox
   - vlc
-
