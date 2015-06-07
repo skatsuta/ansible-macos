@@ -2,6 +2,7 @@
 homebrew_packages:
   - ansible
   - autojump
+  - awscli
   - bash
   - boot2docker
   - brew-cask
