@@ -7,14 +7,9 @@
 ##### Plugins #####
 - name: install zaw
   git:
-    repo=ssh://git@github.com/zsh-users/zaw.git
-    dest={{ zsh_plugin_home }}/zaw
-  tags: zsh-install-plugins
-
-- name: install zsh-notify
-  git:
-    repo=ssh://git@github.com/marzocchi/zsh-notify.git
-    dest={{ zsh_plugin_home }}/zsh-notify
+    repo=ssh://git@github.com/{{ item.user }}/{{ item.name }}.git
+    dest={{ zsh_plugin_home }}/{{ item.name }}
+  with_items: zsh_plugins
   tags: zsh-install-plugins
 
 

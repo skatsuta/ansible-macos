@@ -8,3 +8,10 @@ zsh_prezto_config_files:
   - zprofile
   - zshenv
 
+zsh_plugins:
+  - user: zsh-users
+    name: zaw
+  - user: marzocchi
+    name: zsh-notify
+  - user: bobthecow
+    name: git-flow-completion
