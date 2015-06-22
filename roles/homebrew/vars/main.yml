@@ -15,7 +15,6 @@ homebrew_packages:
   - fontconfig
   - fpp
   - freetype
-  - fzf
   - gcc
   - gettext
   - ghc
