@@ -1,0 +1,6 @@
+---
+fzf_repo: ssh://git@github.com/junegunn/fzf.git
+
+fzf_home: ~/.fzf
+
+fzf_depth: 1

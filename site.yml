@@ -15,4 +15,5 @@
       tags: ruby
     - role: vagrant
       tags: vagrant
-
+    - role: fzf
+      tags: fzf

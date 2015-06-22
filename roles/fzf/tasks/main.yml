@@ -1,0 +1,13 @@
+---
+- name: pull fzf repository
+  git:
+    repo={{ fzf_repo }}
+    dest={{ fzf_home }}
+    depth={{ fzf_depth }}
+  register: fzf_status
+  tags: fzf-pull
+
+- name: install fzf
+  command: "{{ fzf_home }}/install"
+  when: fzf_status.changed
+  tags: fzf-install
