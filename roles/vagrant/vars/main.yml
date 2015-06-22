@@ -4,3 +4,4 @@ vagrant_plugins:
   - vagrant-cachier
   - vagrant-omnibus
   - vagrant-vbguest
+  - vagrant-vbox-snapshot
