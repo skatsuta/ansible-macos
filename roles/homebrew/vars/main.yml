@@ -26,6 +26,7 @@ homebrew_packages:
   - icdiff
   - jq
   - llvm
+  - maven
   - mysql
   - nasm
   - nkf
