@@ -6,3 +6,7 @@
     install_options=with-cc-common
   tags: go-install
 
+- name: install packages
+  command: go get -u {{ item }}
+  with_items: go_pkgs
+  tags: go-pkg-install
