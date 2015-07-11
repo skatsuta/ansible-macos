@@ -2,9 +2,9 @@
 
 
 # Configurations
-USER=${USER:-skatsuta}
+GHUSER=${GHUSER:-skatsuta}
 REPO=${REPO:-ansible-osx}
-DEST=${DEST:-${HOME}/src/github.com/${USER}}
+DEST=${DEST:-${HOME}/src/github.com/${GHUSER}}
 
 
 # Generate SSH Key
@@ -80,8 +80,8 @@ clone_repo() {
   mkdir -p $DEST
   cd $DEST
 
-  echo "Clone ${USER}/${REPO}..."
-  git clone git@github.com:${USER}/${REPO}.git
+  echo "Clone ${GHUSER}/${REPO}..."
+  git clone git@github.com:${GHUSER}/${REPO}.git
 }
 
 # Provision
