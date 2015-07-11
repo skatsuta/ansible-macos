@@ -7,6 +7,7 @@ homebrew_packages:
   - boot2docker
   - brew-cask
   - cabal-install
+  - ccat
   - colordiff
   - coreutils
   - ctags
