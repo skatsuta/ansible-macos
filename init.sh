@@ -31,7 +31,7 @@ generate_ssh_key() {
 prompt_confirmation() {
   echo "You should add the generated key to GitHub before proceeding."
   while true; do
-    read -p "Are you sure to proceed? [Yn] " yn
+    read -p "Are you sure you want to proceed? [Yn] " yn
     case $yn in
       [Yy]*|'')
         echo "Proceeding..."
