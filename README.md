@@ -10,6 +10,6 @@ Before running the script below, you should:
 Then run
 
 ```sh
-$ curl https://raw.githubusercontent.com/skatsuta/ansible-osx/master/init.sh | bash
+$ curl -fsSL https://raw.githubusercontent.com/skatsuta/ansible-osx/master/init.sh | bash
 ```
 
