@@ -7,6 +7,15 @@ REPO=${REPO:-ansible-osx}
 DEST=${DEST:-${HOME}/src/github.com/${GHUSER}}
 
 
+# Show variables
+show_variables() {
+  echo "Configurations:"
+  echo "    - Username:    ${GHUSER}"
+  echo "    - Repository:  ${REPO}"
+  echo "    - Destination: ${DEST}"
+}
+
+
 # Generate SSH Key
 generate_ssh_key() {
   if [[ -f ~/.ssh/id_rsa ]]; then
@@ -100,6 +109,7 @@ provision() {
 
 # Run the above functions
 run() {
+  show_variables
   generate_ssh_key
   prompt_confirmation
   install_xcode
