@@ -1,7 +1,7 @@
 ---
 dotfiles_repo: skatsuta/dotfiles
 
-dotfiles_dir:  ~/repos/dotfiles
+dotfiles_dir:  ~/src/github.com/skatsuta/dotfiles
 
 dotfiles:
   # Git

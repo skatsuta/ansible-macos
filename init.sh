@@ -4,7 +4,7 @@
 # Configurations
 USER=skatsuta
 REPO=ansible-osx
-DEST=${HOME}/repos
+DEST=${HOME}/src/github.com/skatsuta
 
 
 # Generate SSH Key
