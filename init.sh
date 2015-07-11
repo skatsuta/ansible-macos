@@ -102,7 +102,7 @@ provision() {
   echo "Initialization has completed successfully."
   echo "To start provisioning, run"
   echo
-  echo "  \$ cd ~/repos/${REPO}"
+  echo "  \$ cd ${dir}"
   echo '  $ ansible-playbook site.yml'
 }
 
