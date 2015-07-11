@@ -2,9 +2,9 @@
 
 
 # Configurations
-USER=skatsuta
-REPO=ansible-osx
-DEST=${HOME}/src/github.com/skatsuta
+USER=${USER:-skatsuta}
+REPO=${REPO:-ansible-osx}
+DEST=${DEST:-${HOME}/src/github.com/${USER}}
 
 
 # Generate SSH Key
@@ -110,4 +110,3 @@ run() {
 }
 
 run
-
