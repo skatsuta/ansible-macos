@@ -89,7 +89,6 @@ clone_repo() {
   mkdir -p $DEST
   cd $DEST
 
-  echo "Clone ${GHUSER}/${REPO}..."
   git clone git@github.com:${GHUSER}/${REPO}.git
 }
 
