@@ -1,6 +1,7 @@
 ---
 go_pkgs:
   - github.com/axw/gocov
+  - github.com/dinedal/textql
   - github.com/golang/lint/golint
   - github.com/jstemmer/gotags
   - github.com/kisielk/errcheck
