@@ -12,6 +12,7 @@ go_pkgs:
   - github.com/onsi/ginkgo/ginkgo
   - github.com/onsi/gomega
   - github.com/pilu/fresh
+  - github.com/pquerna/ffjson
   - github.com/rogpeppe/godef
   - github.com/tools/godep
   - golang.org/x/tools/cmd/goimports
