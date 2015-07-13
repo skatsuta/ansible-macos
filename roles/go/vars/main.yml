@@ -2,10 +2,12 @@
 go_pkgs:
   - github.com/axw/gocov
   - github.com/dinedal/textql
+  - github.com/go-bootstrap/go-bootstrap
   - github.com/golang/lint/golint
   - github.com/jstemmer/gotags
   - github.com/kisielk/errcheck
   - github.com/mattn/goveralls
+  - github.com/monochromegane/argen/...
   - github.com/motemen/ghq
   - github.com/motemen/gore
   - github.com/nsf/gocode
