@@ -15,6 +15,7 @@ homebrew_packages:
   - direnv
   - docker
   - docker-compose
+  - docker-machine
   - fontconfig
   - fpp
   - freetype
