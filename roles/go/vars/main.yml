@@ -6,6 +6,7 @@ go_pkgs:
   - github.com/golang/lint/golint
   - github.com/jstemmer/gotags
   - github.com/kisielk/errcheck
+  - github.com/mailgun/godebug
   - github.com/mattn/goveralls
   - github.com/monochromegane/argen/...
   - github.com/motemen/ghq
