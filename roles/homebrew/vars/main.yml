@@ -49,6 +49,7 @@ homebrew_packages:
   - rsync
   - ruby
   - ruby-build
+  - rust
   - scala
   - ssh-copy-id
   - terminal-notifier
