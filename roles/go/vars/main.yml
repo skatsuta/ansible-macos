@@ -1,6 +1,6 @@
 ---
 go_pkgs:
-  - github.com/axw/gocov
+  - github.com/axw/gocov/gocov
   - github.com/dinedal/textql
   - github.com/go-bootstrap/go-bootstrap
   - github.com/golang/lint/golint
