@@ -4,6 +4,7 @@ homebrew_packages:
   - autojump
   - awscli
   - bash
+  - bats
   - boot2docker
   - brew-cask
   - cabal-install
