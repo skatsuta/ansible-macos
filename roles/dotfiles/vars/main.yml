@@ -5,8 +5,10 @@ dotfiles_dir:  ~/src/github.com/skatsuta/dotfiles
 
 dotfiles:
   # Git
-  - src:  gitconfig
+  - src:  git/gitconfig
     dest: ~/.gitconfig
+  - src:  git/gitignore_global
+    dest: ~/.gitignore_global
   # zsh
   - src:  zsh/zshrc
     dest: ~/.zshrc
