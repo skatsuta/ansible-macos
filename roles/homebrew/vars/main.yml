@@ -5,7 +5,6 @@ homebrew_packages:
   - awscli
   - bash
   - bats
-  - boot2docker
   - brew-cask
   - cabal-install
   - ccat
