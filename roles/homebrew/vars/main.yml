@@ -38,10 +38,10 @@ homebrew_packages:
   - nkf
   - node
   - openssl
-  - the_platinum_searcher
   - peco
   - pyenv
   - python
+  - q
   - rbenv
   - rbenv-gem-rehash
   - readline
@@ -54,6 +54,7 @@ homebrew_packages:
   - scala
   - ssh-copy-id
   - terminal-notifier
+  - the_platinum_searcher
   - the_silver_searcher
   - thefuck
   - tig
