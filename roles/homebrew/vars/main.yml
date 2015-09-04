@@ -67,6 +67,7 @@ homebrew_packages:
 
 homebrew_repos:
   - homebrew/dupes
+  - homebrew/versions
   - caskroom/cask
   - caskroom/versions
 
