@@ -17,6 +17,7 @@ go_pkgs:
   - github.com/pilu/fresh
   - github.com/pquerna/ffjson
   - github.com/rogpeppe/godef
+  - github.com/svent/sift
   - github.com/tools/godep
   - golang.org/x/tools/cmd/goimports
   - golang.org/x/tools/cmd/gorename
