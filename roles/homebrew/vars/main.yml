@@ -54,6 +54,7 @@ homebrew_packages:
   - ruby-build
   - rust
   - scala
+  - sift
   - ssh-copy-id
   - terminal-notifier
   - terraform
