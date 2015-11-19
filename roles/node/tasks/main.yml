@@ -1,0 +1,22 @@
+---
+- name: pull nvm repository
+  git:
+    repo={{ nvm_repo }}
+    dest={{ nvm_home }}
+  register: nvm_status
+  tags: nvm-pull
+
+- name: find the latest version of nvm
+  command: git describe --abbrev=0 --tags
+  args:
+    chdir: "{{ nvm_home }}"
+  register: nvm_latest_ver
+  when: nvm_status.changed
+  tags: nvm-find-latest
+
+- name: checkout the latest nvm
+  command: git checkout {{ nvm_latest_ver.stdout }}
+  args:
+    chdir: "{{ nvm_home }}"
+  when: nvm_status.changed
+  tags: nvm-checkout

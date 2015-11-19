@@ -17,3 +17,5 @@
       tags: vagrant
     - role: fzf
       tags: fzf
+    - role: node
+      tags: node
