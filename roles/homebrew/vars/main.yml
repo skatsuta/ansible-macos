@@ -37,6 +37,7 @@ homebrew_packages:
   - mycli
   - mysql
   - nasm
+  - neovim
   - nkf
   - node
   - openssl
@@ -77,6 +78,7 @@ homebrew_repos:
   - homebrew/versions
   - caskroom/cask
   - caskroom/versions
+  - neovim/neovim
 
 homebrew_cask_packages:
   - a-better-finder-rename
