@@ -27,7 +27,6 @@ homebrew_packages:
   - git
   - git-flow
   - gnu-sed
-  - godep
   - httpie
   - hub
   - icdiff
