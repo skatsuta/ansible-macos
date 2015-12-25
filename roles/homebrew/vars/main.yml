@@ -95,7 +95,6 @@ homebrew_cask_packages:
   - iterm2
   - java
   - karabiner
-  - kobito
   - macdown
   - macvim
   - miro-video-converter
