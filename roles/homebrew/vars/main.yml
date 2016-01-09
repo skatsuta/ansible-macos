@@ -47,7 +47,6 @@ homebrew_packages:
   - python
   - q
   - rbenv
-  - rbenv-gem-rehash
   - readline
   - reattach-to-user-namespace
   - redis
