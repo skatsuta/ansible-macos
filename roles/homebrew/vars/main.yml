@@ -61,6 +61,7 @@ homebrew_packages:
   - ssh-copy-id
   - terminal-notifier
   - terraform
+  - textql
   - the_platinum_searcher
   - the_silver_searcher
   - thefuck

@@ -2,7 +2,6 @@
 go_pkgs:
   - github.com/alecthomas/gometalinter
   - github.com/axw/gocov/gocov
-  - github.com/dinedal/textql/...
   - github.com/go-bootstrap/go-bootstrap
   - github.com/golang/lint/golint
   - github.com/jstemmer/gotags
