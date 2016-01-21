@@ -24,6 +24,7 @@ homebrew_packages:
   - gettext
   - ghc
   - ghq
+  - gibo
   - git
   - git-flow
   - gnu-sed
