@@ -105,7 +105,6 @@ homebrew_cask_packages:
   - slack
   - sublime-text3
   - the-unarchiver
-  - tunnelblick
   - vagrant
   - virtualbox
   - vlc
