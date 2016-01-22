@@ -1,5 +1,6 @@
 ---
 go_pkgs:
+  - github.com/Alistanis/st
   - github.com/alecthomas/gometalinter
   - github.com/axw/gocov/gocov
   - github.com/go-bootstrap/go-bootstrap
