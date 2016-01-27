@@ -17,11 +17,8 @@ homebrew_packages:
   - docker
   - docker-compose
   - docker-machine
-  - fontconfig
   - fpp
-  - freetype
   - gcc
-  - gettext
   - ghc
   - ghq
   - gibo
@@ -48,7 +45,6 @@ homebrew_packages:
   - python
   - q
   - rbenv
-  - readline
   - reattach-to-user-namespace
   - redis
   - rsense
