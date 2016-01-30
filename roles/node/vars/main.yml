@@ -1,3 +1,3 @@
 ---
-nvm_repo: ssh://git@github.com/creationix/nvm.git
-nvm_home: ~/.nvm
+nodebrew_url: git.io/nodebrew
+nodebrew_home: ~/.nodebrew
