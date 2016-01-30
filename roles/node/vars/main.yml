@@ -1,3 +1,11 @@
 ---
 nodebrew_url: git.io/nodebrew
 nodebrew_home: ~/.nodebrew
+
+node_modules:
+  - hexo-cli
+  - ied
+  - jshint
+  - node-gyp
+  - npm-check-updates
+  - tldr
