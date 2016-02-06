@@ -5,26 +5,33 @@ set -e -u -x
 GHUSER=${GHUSER:-skatsuta}
 REPO=${REPO:-ansible-osx}
 DEST=${DEST:-${HOME}/src/github.com/${GHUSER}}
+SSH_KEY_TYPE=${SSH_KEY_TYPE:-ed25519}
+SSH_KEY_PATH=$HOME/.ssh/id_$SSH_KEY_TYPE
 
 
 # Show variables
 show_variables() {
   echo "Configurations:"
-  echo "    - Username:    ${GHUSER}"
-  echo "    - Repository:  ${REPO}"
-  echo "    - Destination: ${DEST}"
+  echo "    - Username:     ${GHUSER}"
+  echo "    - Repository:   ${REPO}"
+  echo "    - Destination:  ${DEST}"
+  echo "    - SSH key type: ${SSH_KEY_TYPE}"
 }
 
 
 # Generate SSH Key
 generate_ssh_key() {
-  if [[ -f ~/.ssh/id_rsa ]]; then
-    echo "SSH key is already generated."
+  if [[ -f "$SSH_KEY_PATH" ]]; then
+    echo "Your SSH key already exists."
     return
   fi
 
-  echo "Generate SSH key..."
-  ssh-keygen
+  echo "Generating a SSH key..."
+  ssh-keygen -t "$SSH_KEY_TYPE"
+
+  echo "Adding your SSH key to the ssh-agent..."
+  eval "$(ssh-agent -s)"
+  ssh-add 
 }
 
 # Prompt the confirmation of adding the SSH key to GitHub
