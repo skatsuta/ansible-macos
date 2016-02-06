@@ -36,7 +36,7 @@ generate_ssh_key() {
 
 # Prompt the confirmation of adding the SSH key to GitHub
 prompt_confirmation() {
-  echo "Copying your SSH key into your clipboard..."
+  echo "Copying your SSH public key into your clipboard..."
   pbcopy < "$SSH_KEY_PATH.pub"
 
   echo "Now you should add the generated key to GitHub before proceeding."
@@ -62,7 +62,7 @@ install_xcode() {
     return
   fi
 
-  echo "Install Xcode..."
+  echo "Installing Xcode..."
   echo "*** If a dialog is shown,\
     push 'Get Xcode' button to download Xcode before proceeding! ***"
   sudo xcodebuild -license
@@ -76,23 +76,23 @@ install_homebrew() {
     return
   fi
 
-  echo "Install Homebrew..."
+  echo "Installing Homebrew..."
   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-  echo "Run 'brew doctor'..."
+  echo "Running 'brew doctor'..."
   brew doctor
 }
 
 # Install packages for running Ansible playbook
 install_packages_for_ansible() {
-  echo "Install packages for running Ansible..."
+  echo "Installing packages for running Ansible..."
   brew install git python ansible
 }
 
 # Clone my GitHub repository
 clone_repo() {
-  if [[ -d ${DEST}/${REPO} ]]; then
-    echo "Repository is already cloned."
+  if [[ -d "${DEST}/${REPO}" ]]; then
+    echo "Repository already exists."
     return
   fi
 
