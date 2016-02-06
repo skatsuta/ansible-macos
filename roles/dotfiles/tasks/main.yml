@@ -6,10 +6,8 @@
   tags: dotfiles-clone
 
 - name: deploy each symlink of dotfiles on $HOME
-  file:
-    src={{ dotfiles_dir}}/{{ item.src }}
-    dest={{ item.dest }}
-    state=link
-  with_items: dotfiles
+  command: ./install
+    chdir={{ dotfiles_dir }}
+    creates=~/.zshrc
   tags: dotfiles-symlink
 
