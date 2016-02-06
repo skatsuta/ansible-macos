@@ -36,7 +36,10 @@ generate_ssh_key() {
 
 # Prompt the confirmation of adding the SSH key to GitHub
 prompt_confirmation() {
-  echo "You should add the generated key to GitHub before proceeding."
+  echo "Copying your SSH key into your clipboard..."
+  pbcopy < "$SSH_KEY_PATH.pub"
+
+  echo "Now you should add the generated key to GitHub before proceeding."
   while true; do
     read -p "Are you sure you want to proceed? [Yn] " yn
     case $yn in
