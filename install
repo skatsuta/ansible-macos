@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
-
-# show each command
-set -x
+set -e -u -x
 
 # Configurations
 GHUSER=${GHUSER:-skatsuta}
