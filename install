@@ -29,9 +29,9 @@ generate_ssh_key() {
   echo "Generating a SSH key..."
   ssh-keygen -t "$SSH_KEY_TYPE"
 
-  echo "Adding your SSH key to the ssh-agent..."
+  echo "Adding your SSH key to your ssh-agent..."
   eval "$(ssh-agent -s)"
-  ssh-add 
+  ssh-add "$SSH_KEY_PATH"
 }
 
 # Prompt the confirmation of adding the SSH key to GitHub
