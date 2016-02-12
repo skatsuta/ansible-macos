@@ -95,8 +95,6 @@ homebrew_cask_packages:
   - karabiner
   - macdown
   - macvim
-  - miro-video-converter
-  - sdformatter
   - sequel-pro
   - skype
   - slack
