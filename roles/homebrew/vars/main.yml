@@ -95,6 +95,7 @@ homebrew_cask_packages:
   - karabiner
   - macdown
   - macvim
+  - omnidisksweeper
   - sequel-pro
   - skype
   - slack
