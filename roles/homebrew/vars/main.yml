@@ -1,4 +1,11 @@
 ---
+homebrew_repos:
+  - homebrew/dupes
+  - homebrew/versions
+  - caskroom/cask
+  - caskroom/versions
+  - neovim/neovim
+
 homebrew_packages:
   - ansible
   - autojump
@@ -69,13 +76,6 @@ homebrew_packages:
   - wget
   - wrk
   - zsh
-
-homebrew_repos:
-  - homebrew/dupes
-  - homebrew/versions
-  - caskroom/cask
-  - caskroom/versions
-  - neovim/neovim
 
 homebrew_cask_packages:
   - a-better-finder-rename
