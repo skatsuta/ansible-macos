@@ -25,6 +25,7 @@ homebrew_packages:
   - docker
   - docker-compose
   - docker-machine
+  - ec2-api-tools
   - fpp
   - gcc
   - ghc
