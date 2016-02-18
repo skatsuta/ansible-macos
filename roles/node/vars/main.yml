@@ -5,6 +5,7 @@ nodebrew_home: ~/.nodebrew
 node_modules:
   - hexo-cli
   - ied
+  - jsfmt
   - jshint
   - node-gyp
   - npm-check-updates
