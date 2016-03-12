@@ -9,6 +9,7 @@ homebrew_repos:
 homebrew_packages:
   - ansible
   - autojump
+  - aws-shell
   - awscli
   - bash
   - bats
