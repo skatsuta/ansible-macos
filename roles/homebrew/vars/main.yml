@@ -51,7 +51,6 @@ homebrew_packages:
   - packer
   - peco
   - pyenv
-  - python
   - q
   - rbenv
   - reattach-to-user-namespace

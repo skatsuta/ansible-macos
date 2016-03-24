@@ -86,7 +86,7 @@ install_homebrew() {
 # Install packages for running Ansible playbook
 install_packages_for_ansible() {
   echo "Installing packages for running Ansible..."
-  brew install git python ansible
+  brew install git ansible
 }
 
 # Clone my GitHub repository
