@@ -84,7 +84,6 @@ homebrew_cask_packages:
   - appcleaner
   - disk-inventory-x
   - dropbox
-  - evernote
   - google-chrome
   - google-drive
   - google-japanese-ime
