@@ -1,6 +1,6 @@
 ---
 gems:
-  - ansible_tools
   - bundler
   - rake
-
+  - rubocop
+  - refe2
