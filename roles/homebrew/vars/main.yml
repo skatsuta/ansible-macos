@@ -83,6 +83,7 @@ homebrew_cask_packages:
   - alfred
   - appcleaner
   - disk-inventory-x
+  - docker
   - dropbox
   - google-chrome
   - google-drive
