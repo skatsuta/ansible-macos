@@ -99,7 +99,7 @@ homebrew_cask_packages:
   - sequel-pro
   - skype
   - slack
-  - sublime-text3
+  - sublime-text
   - the-unarchiver
   - vagrant
   - virtualbox
