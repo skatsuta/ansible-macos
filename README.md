@@ -1,4 +1,4 @@
-# Ansible playbook for OS X
+# Ansible playbook for macOS
 
 This playbook provides automatic installation of:
 
@@ -12,7 +12,7 @@ This playbook provides automatic installation of:
 - fzf
 - Node modules
 
-on your OS X.
+on your macOS.
 
 ## Usage
 
@@ -40,7 +40,7 @@ After all the setup processes are done, you will see the following message:
 Initialization has completed successfully.
 To start provisioning, run
 
-  $ cd /Users/skatsuta/src/github.com/skatsuta/ansible-osx
+  $ cd /Users/skatsuta/src/github.com/skatsuta/ansible-macos
   $ ansible-playbook site.yml
 ```
 
