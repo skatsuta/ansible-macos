@@ -6,5 +6,5 @@
 
 - name: install npm modules
   npm: name={{ item }} global=yes
-  with_items: node_modules
+  with_items: '{{ node_modules }}'
   tags: npm-install

@@ -5,6 +5,6 @@
 
 - name: install plugins
   command: vagrant plugin install {{ item }}
-  with_items: vagrant_plugins
+  with_items: '{{ vagrant_plugins }}'
   tags: vagrant-plugins
 

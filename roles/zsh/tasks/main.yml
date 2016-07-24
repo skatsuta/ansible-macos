@@ -9,7 +9,7 @@
   git:
     repo=ssh://git@github.com/{{ item.user }}/{{ item.name }}.git
     dest={{ zsh_plugin_home }}/{{ item.name }}
-  with_items: zsh_plugins
+  with_items: '{{ zsh_plugins }}'
   tags: zsh-install-plugins
 
 
@@ -26,6 +26,6 @@
     src={{ zsh_prezto_home }}/runcoms/{{ item }}
     dest=~/.{{ item }}
     state=link
-  with_items: zsh_prezto_config_files
+  with_items: '{{ zsh_prezto_config_files }}'
   tags: zsh-cfg-fwk
 

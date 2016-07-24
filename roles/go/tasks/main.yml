@@ -8,5 +8,5 @@
 
 - name: install packages
   command: go get -u {{ item }}
-  with_items: go_pkgs
+  with_items: '{{ go_pkgs }}'
   tags: go-pkg-install
