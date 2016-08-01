@@ -6,6 +6,7 @@ node_modules:
   - hexo-cli
   - ied
   - jsfmt
+  - jsonlint
   - eslint
   - node-gyp
   - npm-check-updates
