@@ -82,23 +82,25 @@ homebrew_cask_packages:
   - adobe-reader
   - alfred
   - appcleaner
+  - coderunner
   - disk-inventory-x
   - docker
   - dropbox
   - google-chrome
   - google-drive
   - google-japanese-ime
-  - hex-fiend
   - intellij-idea-ce
   - iterm2
   - java
   - karabiner
+  - kindle
   - macdown
   - macvim
   - omnidisksweeper
   - sequel-pro
   - skype
   - slack
+  - spectacle
   - sublime-text
   - the-unarchiver
   - vagrant
