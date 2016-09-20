@@ -55,6 +55,7 @@ homebrew_packages:
   - rbenv
   - reattach-to-user-namespace
   - redis
+  - remarshal
   - rsense
   - rsync
   - ruby
