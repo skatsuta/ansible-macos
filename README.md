@@ -21,7 +21,7 @@ on your macOS.
 Just run
 
 ```sh
-$ curl -fsSL https://raw.githubusercontent.com/skatsuta/ansible-osx/master/install | bash
+$ bash <(curl -fsSL https://raw.githubusercontent.com/skatsuta/ansible-osx/master/install)
 ```
 
 Then you will be prompted like the following:
