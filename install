@@ -41,7 +41,7 @@ prompt_confirmation() {
 
   echo "Now you should add the generated key to GitHub before proceeding."
   while true; do
-    read -p "Are you sure you want to proceed? [Yn] " yn
+    read -p "Are you sure you want to proceed? [Y/n] " yn
     case $yn in
       [Yy]*|'')
         echo "Proceeding..."
