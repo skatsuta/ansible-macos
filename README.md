@@ -18,10 +18,9 @@ on your macOS.
 
 ### Setup
 
-Just run
-
 ```sh
-$ bash <(curl -fsSL https://raw.githubusercontent.com/skatsuta/ansible-osx/master/install)
+$ curl -O https://raw.githubusercontent.com/skatsuta/ansible-osx/master/install
+$ bash install
 ```
 
 Then you will be prompted like the following:
@@ -29,7 +28,7 @@ Then you will be prompted like the following:
 ```sh
 Copying your SSH public key into your clipboard...
 Now you should add the generated key to GitHub before proceeding.
-Are you sure you want to proceed? [Yn] 
+Are you sure you want to proceed? [Y/n] 
 ```
 
 Your public key is already copied in your clipboard, so add the key to GitHub before hitting the enter key.
@@ -41,17 +40,18 @@ Initialization has completed successfully.
 To start provisioning, run
 
   $ cd /Users/skatsuta/src/github.com/skatsuta/ansible-macos
-  $ ansible-playbook site.yml
+  $ GOPATH=~ ansible-playbook playbook.yml
 ```
 
 Then go to the next step.
+(If you encounter any problem during this script's execution, fix it and just re-run the script.)
 
 ### Full Installation
 
 If you want to install all the packages above, just run
 
 ```sh
-$ ansible-playbook site.yml
+$ ansible-playbook playbook.yml
 ```
 
 ### Partial Installation
@@ -59,7 +59,7 @@ $ ansible-playbook site.yml
 If you want to install a paticular package, for example, `go`, run with `-t` option:
 
 ```sh
-$ ansible-playbook site.yml -t go
+$ ansible-playbook playbook.yml -t go
 ```
 
 This provisions only Go environment.
