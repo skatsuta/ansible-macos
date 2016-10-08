@@ -1,6 +1,7 @@
 ---
 homebrew_repos:
   - homebrew/versions
+  - caskroom/versions # needed to install IntelliJ IDEA Community Edition
 
 homebrew_packages:
   - ansible
