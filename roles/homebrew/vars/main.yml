@@ -36,7 +36,6 @@ homebrew_packages:
   - nkf
   - node
   - openssl
-  - otto
   - packer
   - peco
   - pyenv
@@ -46,8 +45,6 @@ homebrew_packages:
   - reattach-to-user-namespace
   - redis
   - remarshal
-  - rsense
-  - rsync
   - ruby
   - ruby-build
   - rust
