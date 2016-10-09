@@ -64,8 +64,7 @@ install_xcode() {
   fi
 
   echo "Installing Xcode..."
-  echo "*** If a dialog is shown,\
-    push 'Get Xcode' button to download Xcode before proceeding! ***"
+  echo "*** If a dialog is shown, push 'Get Xcode' button to download Xcode before proceeding! ***"
   sudo xcodebuild -license
   xcode-select --install
 }
