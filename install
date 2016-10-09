@@ -27,7 +27,8 @@ generate_ssh_key() {
   fi
 
   echo "Generating a SSH key..."
-  ssh-keygen -t "$SSH_KEY_TYPE"
+  read -p "Type your email address: " email
+  ssh-keygen -t "$SSH_KEY_TYPE" -C "$email"
 
   echo "Adding your SSH key to your ssh-agent..."
   eval "$(ssh-agent -s)"
