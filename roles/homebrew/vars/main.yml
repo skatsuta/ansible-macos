@@ -46,6 +46,7 @@ homebrew_packages:
   - reattach-to-user-namespace
   - redis
   - remarshal
+  - ripgrep
   - ruby
   - ruby-build
   - rust
