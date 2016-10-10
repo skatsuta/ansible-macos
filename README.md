@@ -19,8 +19,8 @@ on your macOS.
 ### Setup
 
 ```sh
-$ curl -O https://raw.githubusercontent.com/skatsuta/ansible-osx/master/install
-$ bash install
+$ curl -O https://raw.githubusercontent.com/skatsuta/ansible-osx/master/setup
+$ bash setup
 ```
 
 Then you will be prompted like the following:
@@ -44,7 +44,7 @@ To start provisioning, run
 ```
 
 Then go to the next step.
-(If you encounter any problem during this script's execution, fix it and just re-run the script.)
+(If you encounter any problem during setup, fix it and just re-run the script.)
 
 ### Full Installation
 
