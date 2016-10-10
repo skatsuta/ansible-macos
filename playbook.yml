@@ -3,6 +3,8 @@
   roles:
     - role: dotfiles
       tags: dotfiles
+    - role: scripts
+      tags: scripts
     - role: zsh
       tags: zsh
     - role: vim

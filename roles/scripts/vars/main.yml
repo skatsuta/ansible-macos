@@ -1,0 +1,4 @@
+---
+scripts_repo: skatsuta/scripts
+scripts_dir:  ~/src/github.com/skatsuta/scripts
+target_dir:   ~/bin
