@@ -1,25 +1,49 @@
 ---
+go_bin_dir: ~/bin
 go_pkgs:
-  - github.com/Alistanis/st
-  - github.com/alecthomas/gometalinter
-  - github.com/axw/gocov/gocov
-  - github.com/go-bootstrap/go-bootstrap
-  - github.com/golang/lint/golint
-  - github.com/jstemmer/gotags
-  - github.com/kisielk/errcheck
-  - github.com/mailgun/godebug
-  - github.com/mattn/goveralls
-  - github.com/monochromegane/argen/...
-  - github.com/motemen/gore
-  - github.com/nsf/gocode
-  - github.com/onsi/ginkgo/ginkgo
-  - github.com/onsi/gomega
-  - github.com/pilu/fresh
-  - github.com/pquerna/ffjson
-  - github.com/rogpeppe/godef
-  - github.com/tools/godep
-  - golang.org/x/tools/cmd/goimports
-  - golang.org/x/tools/cmd/gorename
-  - golang.org/x/tools/cmd/present
-  - golang.org/x/tools/cmd/stringer
-  - gopkg.in/matm/v1/gocov-html
+  - path: github.com/Alistanis/st
+    name: st
+  - path: github.com/alecthomas/gometalinter
+    name: gometalinter
+  - path: github.com/axw/gocov/gocov
+    name: gocov
+  - path: github.com/go-bootstrap/go-bootstrap
+    name: go-bootstrap
+  - path: github.com/golang/lint/golint
+    name: golint
+  - path: github.com/jstemmer/gotags
+    name: gotags
+  - path: github.com/kisielk/errcheck
+    name: errcheck
+  - path: github.com/mailgun/godebug
+    name: godebug
+  - path: github.com/mattn/goveralls
+    name: goveralls
+  - path: github.com/monochromegane/argen/...
+    name: argen
+  - path: github.com/motemen/gore
+    name: gore
+  - path: github.com/nsf/gocode
+    name: gocode
+  - path: github.com/onsi/ginkgo/ginkgo
+    name: ginkgo
+  - path: github.com/onsi/gomega
+    name: gomega
+  - path: github.com/pilu/fresh
+    name: fresh
+  - path: github.com/pquerna/ffjson
+    name: ffjson
+  - path: github.com/rogpeppe/godef
+    name: godef
+  - path: github.com/tools/godep
+    name: godep
+  - path: golang.org/x/tools/cmd/goimports
+    name: goimports
+  - path: golang.org/x/tools/cmd/gorename
+    name: gorename
+  - path: golang.org/x/tools/cmd/present
+    name: present
+  - path: golang.org/x/tools/cmd/stringer
+    name: stringer
+  - path: gopkg.in/matm/v1/gocov-html
+    name: gocov-html
