@@ -22,5 +22,4 @@ go_pkgs:
   - golang.org/x/tools/cmd/gorename
   - golang.org/x/tools/cmd/present
   - golang.org/x/tools/cmd/stringer
-  - golang.org/x/tools/cmd/oracle
   - gopkg.in/matm/v1/gocov-html
