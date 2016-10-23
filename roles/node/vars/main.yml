@@ -1,13 +1,12 @@
 ---
 nodebrew_url: git.io/nodebrew
 nodebrew_home: ~/.nodebrew
-
 node_modules:
+  - eslint
   - hexo-cli
-  - ied
   - jsfmt
   - jsonlint
-  - eslint
   - node-gyp
   - npm-check-updates
   - tldr
+  - yarn
