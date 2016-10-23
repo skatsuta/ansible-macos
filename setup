@@ -18,6 +18,11 @@ show_variables() {
   echo "    - SSH key type: ${SSH_KEY_TYPE}"
 }
 
+# Show ~/Library folder
+show_library() {
+  echo "Set to show ~/Library..."
+  chflags nohidden ~/Library
+}
 
 # Generate SSH Key
 generate_ssh_key() {
@@ -118,6 +123,7 @@ provision() {
 # Run the above functions
 run() {
   show_variables
+  show_library
   generate_ssh_key
   prompt_confirmation
   install_command_line_tools
