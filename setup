@@ -56,16 +56,15 @@ prompt_confirmation() {
   done
 }
 
-# Install Xcode
-install_xcode() {
+# Install Command Line Tools
+install_command_line_tools() {
   if [[ -d /Library/Developer/CommandLineTools ]]; then
-    echo "Xcode is already installed."
+    echo "Command Line Tools is already installed."
     return
   fi
 
-  echo "Installing Xcode..."
-  echo "*** If a dialog is shown, push 'Get Xcode' button to download Xcode before proceeding! ***"
-  sudo xcodebuild -license
+  echo "Installing Command Line Tools..."
+  echo "*** If a dialog is shown, push 'Install' button to install Command Line Tools before proceeding! ***"
   xcode-select --install
 }
 
@@ -121,7 +120,7 @@ run() {
   show_variables
   generate_ssh_key
   prompt_confirmation
-  install_xcode
+  install_command_line_tools
   install_homebrew
   install_packages_for_ansible
   clone_repo
