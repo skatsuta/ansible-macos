@@ -3,21 +3,21 @@
   roles:
     - role: dotfiles
       tags: dotfiles
-    - role: scripts
-      tags: scripts
     - role: zsh
       tags: zsh
     - role: vim
       tags: vim
-    - role: go
-      tags: go
     - role: homebrew
       tags: homebrew
+    - role: scripts
+      tags: scripts
+    - role: node
+      tags: node
     - role: ruby
       tags: ruby
+    - role: go
+      tags: go
     - role: vagrant
       tags: vagrant
     - role: fzf
       tags: fzf
-    - role: node
-      tags: node
