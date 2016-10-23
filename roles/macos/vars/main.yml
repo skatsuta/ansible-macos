@@ -1,0 +1,115 @@
+---
+macos_defaults:
+  #===== Global settings =====
+  # Make key repeat fastest
+  - domain: NSGlobalDomain
+    key: InitialKeyRepeat
+    type: int
+    value: 15
+
+  # Make key repeat fastest
+  - domain: NSGlobalDomain
+    key: KeyRepeat
+    type: int
+    value: 2
+
+  # Do not upload documents to iCloud
+  - domain: NSGlobalDomain
+    key: NSDocumentSaveNewDocumentsToCloud
+    type: bool
+    value: false
+
+  # Show all file extensions
+  - domain: NSGlobalDomain
+    key: AppleShowAllExtensions
+    type: bool
+    value: true
+    notify: Restart Finder
+
+  # Make Trackpad's traking speed fastest
+  - domain: NSGlobalDomain
+    key: com.apple.trackpad.scaling
+    type: float
+    value: 3
+
+
+  #===== Finder =====
+  # Set new Finder windows
+  - domain: com.apple.finder
+    key: NewWindowTargetPath
+    type: string
+    value: 'file://{{ ansible_user_dir }}/Dropbox/'
+    notify: Restart Finder
+
+  # Show mounted servers on desktop
+  - domain: com.apple.finder
+    key: ShowMountedServersOnDesktop
+    type: bool
+    value: true
+    notify: Restart Finder
+
+  # Show all hidden files
+  - domain: com.apple.finder
+    key: AppleShowAllFiles
+    type: string
+    value: 'true'
+    notify: Restart Finder
+
+  # Show full path in Finder title
+  - domain: com.apple.finder
+    key: _FXShowPosixPathInTitle
+    type: bool
+    value: true
+    notify: Restart Finder
+
+
+  #===== Dock =====
+  # Turn hiding on
+  - domain: com.apple.dock
+    key: autohide
+    type: bool
+    value: true
+    notify: Restart Dock
+
+  # Show Dock immediately
+  - domain: com.apple.dock
+    key: autohide-delay
+    type: float
+    value: 0
+    notify: Restart Dock
+
+  # Set position on screen
+  - domain: com.apple.dock
+    key: orientation
+    type: string
+    value: "right"
+    notify: Restart Dock
+
+
+  #===== Trackpad =====
+  # Enable three finger drag (Built-in)
+  - domain: com.apple.AppleMultitouchTrackpad
+    key: TrackpadThreeFingerDrag
+    type: bool
+    value: true
+
+  # Enable three finger drag (Bluetooth)
+  - domain: com.apple.driver.AppleBluetoothMultitouch.trackpad
+    key: TrackpadThreeFingerDrag
+    type: bool
+    value: true
+
+  # Enable "Look up & data detectors" with three fingers tap
+  - domain: com.apple.driver.AppleBluetoothMultitouch.trackpad
+    key: TrackpadThreeFingerTapGesture
+    type: int
+    value: 2
+
+
+  #===== Desktop Services =====
+  # Do not create .DS_Store
+  - domain: com.apple.desktopservices
+    key: DSDontWriteNetworkStores
+    type: bool
+    value: true
+    notify: Restart Finder

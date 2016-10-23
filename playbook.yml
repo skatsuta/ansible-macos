@@ -9,6 +9,8 @@
       tags: vim
     - role: homebrew
       tags: homebrew
+    - role: macos
+      tags: macos
     - role: scripts
       tags: scripts
     - role: node
