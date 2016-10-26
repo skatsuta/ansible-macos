@@ -2,6 +2,7 @@
 homebrew_repos:
   - homebrew/versions
   - caskroom/versions # needed to install IntelliJ IDEA Community Edition
+  - buo/cask-upgrade # useful to upgrade casks
 
 homebrew_packages:
   - ansible
