@@ -19,9 +19,11 @@ show_variables() {
 }
 
 # Show ~/Library folder
-show_library() {
-  echo "Set to show ~/Library..."
+configure() {
+  echo "Setting to show ~/Library..."
   chflags nohidden ~/Library
+  echo "Turning off startup chime..."
+  sudo nvram SystemAudioVolume=" "
 }
 
 # Generate SSH Key
@@ -123,7 +125,7 @@ provision() {
 # Run the above functions
 run() {
   show_variables
-  show_library
+  configure
   generate_ssh_key
   prompt_confirmation
   install_command_line_tools
