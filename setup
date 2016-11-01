@@ -113,7 +113,7 @@ provision() {
   #ansible-playbook playbook.yml
 
   local dir="${DEST}/${REPO}"
-  echo "Initialization has completed successfully."
+  echo "Initialization has been completed successfully."
   echo "To start provisioning, run"
   echo
   echo "  \$ cd ${dir}"

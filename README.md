@@ -36,7 +36,7 @@ Your public key is already copied in your clipboard, so add the key to GitHub be
 After all the setup processes are done, you will see the following message:
 
 ```sh
-Initialization has completed successfully.
+Initialization has been completed successfully.
 To start provisioning, run
 
   $ cd /Users/skatsuta/src/github.com/skatsuta/ansible-macos
@@ -44,7 +44,7 @@ To start provisioning, run
 ```
 
 Then go to the next step.
-(If you encounter any problem during setup, fix it and just re-run the script.)
+(If you encounter any problem during setup, fix it and re-run the script.)
 
 ### Full Installation
 
