@@ -26,11 +26,19 @@ macos_defaults:
     value: true
     notify: Restart Finder
 
-  # Make Trackpad's traking speed fastest
+  # Make Trackpad's tracking speed fastest
   - domain: NSGlobalDomain
     key: com.apple.trackpad.scaling
     type: float
     value: 3
+
+
+  #===== Finder =====
+  # Check for software update daily, not once per week
+  - domain: com.apple.SoftwareUpdate
+    key: ScheduleFrequency
+    type: int
+    value: 1
 
 
   #===== Finder =====
