@@ -74,7 +74,6 @@ homebrew_cask_packages:
   - appcleaner
   - coderunner
   - dash
-  - disk-inventory-x
   - docker
   - dropbox
   - google-chrome
