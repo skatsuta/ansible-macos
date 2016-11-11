@@ -65,6 +65,7 @@ homebrew_packages:
   - typesafe-activator
   - wget
   - wrk
+  - yarn
   - zsh
 
 homebrew_cask_packages:
