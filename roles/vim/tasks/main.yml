@@ -6,7 +6,7 @@
     install_options=with-lua
   tags: vim-install
 
-# install Vim-Plug
+# Install Vim-Plug
 - name: create autoload directory
   file:
     path={{ vim_home }}/autoload
@@ -18,6 +18,16 @@
     url=https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
     dest={{ vim_home }}/autoload/plug.vim
   tags: vim-install-plug
+
+# Install plugins
+- stat: path={{ vim_plug_home }}
+  register: st
+  tags: vim-install-plugins
+
+- name: install plugins
+  command: vim +PlugUpdate +qall
+  when: st.stat.exists == True
+  tags: vim-install-plugins
 
 # Build vimproc.vim if the plugin directory exists
 - stat: path={{ vimproc_home }}
