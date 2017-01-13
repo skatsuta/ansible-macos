@@ -9,4 +9,3 @@ node_modules:
   - node-gyp
   - npm-check-updates
   - tldr
-  - yarn
