@@ -3,7 +3,7 @@
   homebrew:
     name=vim
     state=latest
-    install_options=with-lua
+    install_options=with-lua,with-python3
   tags: vim-install
 
 # Install Vim-Plug
