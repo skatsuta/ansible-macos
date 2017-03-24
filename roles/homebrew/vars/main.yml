@@ -31,6 +31,7 @@ homebrew_packages:
   - hub
   - icdiff
   - jq
+  - knqyf263/pet/pet
   - llvm
   - maven
   - m-cli
@@ -64,6 +65,7 @@ homebrew_packages:
   - tmux
   - tree
   - typesafe-activator
+  - wallix/awless/awless
   - wget
   - wrk
   - yarn
