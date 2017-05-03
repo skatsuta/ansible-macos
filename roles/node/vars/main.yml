@@ -4,8 +4,8 @@ nodebrew_home: ~/.nodebrew
 node_modules:
   - eslint
   - hexo-cli
-  - jsfmt
   - jsonlint
   - node-gyp
   - npm-check-updates
+  - prettier
   - tldr
