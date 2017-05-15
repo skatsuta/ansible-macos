@@ -25,6 +25,7 @@ homebrew_packages:
   - ghq
   - git
   - git-flow
+  - git-secrets
   - gnu-sed
   - haskell-stack
   - httpie
