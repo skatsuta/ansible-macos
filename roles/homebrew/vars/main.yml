@@ -75,7 +75,7 @@ homebrew_packages:
 
 homebrew_cask_packages:
   - a-better-finder-rename
-  - adobe-reader
+  - adobe-acrobat-reader
   - alfred
   - appcleaner
   - coderunner
