@@ -82,8 +82,8 @@ homebrew_cask_packages:
   - dash
   - docker
   - dropbox
+  - google-backup-and-sync
   - google-chrome
-  - google-drive
   - google-japanese-ime
   - intellij-idea-ce
   - iterm2
