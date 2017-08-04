@@ -19,6 +19,8 @@ go_pkgs:
     name: godebug
   - path: github.com/mattn/goveralls
     name: goveralls
+  - path: github.com/mholt/archiver/cmd/archiver
+    name: archiver
   - path: github.com/monochromegane/argen/...
     name: argen
   - path: github.com/motemen/gore
