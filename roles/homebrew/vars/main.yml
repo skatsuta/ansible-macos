@@ -16,6 +16,7 @@ homebrew_packages:
   - cmake
   - coreutils
   - ctags
+  - dep
   - devd
   - diff-so-fancy
   - direnv
