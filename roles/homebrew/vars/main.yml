@@ -21,6 +21,7 @@ homebrew_packages:
   - direnv
   - docker
   - docker-compose
+  - exa
   - fpp
   - gcc
   - ghq
