@@ -35,6 +35,7 @@ homebrew_packages:
   - httpie
   - hub
   - icdiff
+  - jid
   - jq
   - knqyf263/pet/pet
   - llvm
