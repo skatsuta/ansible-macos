@@ -19,7 +19,7 @@ on your macOS.
 ### Setup
 
 ```sh
-$ curl -O https://raw.githubusercontent.com/skatsuta/ansible-osx/master/setup
+$ curl -O https://raw.githubusercontent.com/skatsuta/ansible-macos/master/setup
 $ bash setup
 ```
 
