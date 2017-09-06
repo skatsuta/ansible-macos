@@ -23,3 +23,5 @@
       tags: vagrant
     - role: fzf
       tags: fzf
+    - role: python
+      tags: python

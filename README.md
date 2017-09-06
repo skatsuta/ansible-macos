@@ -6,11 +6,12 @@ This playbook provides automatic installation of:
 - zsh
 - Vim
 - Go
-- Homebrew packages
-- Ruby
+- Homebrew / Cask packages
+- Ruby and Gems
 - Vagrant plugins
 - fzf
 - Node modules
+- Python packages
 
 on your macOS.
 
