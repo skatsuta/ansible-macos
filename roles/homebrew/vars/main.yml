@@ -31,6 +31,7 @@ homebrew_packages:
   - git-secrets
   - glide
   - gnu-sed
+  - grip
   - haskell-stack
   - httpie
   - hub
