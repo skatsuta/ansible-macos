@@ -87,6 +87,7 @@ homebrew_cask_packages:
   - dash
   - docker
   - dropbox
+  - goland
   - google-backup-and-sync
   - google-chrome
   - google-japanese-ime
