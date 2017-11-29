@@ -23,6 +23,7 @@ homebrew_packages:
   - docker
   - docker-compose
   - exa
+  - fd
   - fpp
   - gcc
   - ghq
