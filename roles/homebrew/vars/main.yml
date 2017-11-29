@@ -50,6 +50,7 @@ homebrew_packages:
   - openssl
   - packer
   - peco
+  - pipenv
   - pyenv
   - python
   - q
