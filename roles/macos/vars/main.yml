@@ -121,3 +121,24 @@ macos_defaults:
     type: bool
     value: true
     notify: Restart Finder
+
+
+  #===== Screen Saver =====
+  # Disable screen saver
+  - domain: com.apple.screensaver
+    host: currentHost
+    key: idleTime
+    type: int
+    value: 0
+
+  # Require password after sleep
+  - domain: com.apple.screensaver
+    key: askForPassword
+    type: int
+    value: 1
+
+  # Require password after 5 seconds from sleep
+  - domain: com.apple.screensaver
+    key: askForPasswordDelay
+    type: float
+    value: 5
