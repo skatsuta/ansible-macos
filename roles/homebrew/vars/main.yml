@@ -74,6 +74,7 @@ homebrew_packages:
   - tmux
   - tree
   - typesafe-activator
+  - vitorgalvao/tiny-scripts/cask-repair
   - wallix/awless/awless
   - wget
   - wrk
