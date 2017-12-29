@@ -46,6 +46,7 @@ homebrew_packages:
   - mycli
   - mysql
   - nasm
+  - neovim
   - nkf
   - node
   - openssl
