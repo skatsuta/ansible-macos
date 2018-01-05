@@ -5,6 +5,7 @@ set -e -u
 GHUSER=${GHUSER:-skatsuta}
 REPO=${REPO:-ansible-macos}
 DEST=${DEST:-${HOME}/src/github.com/${GHUSER}}
+DIR="${DEST}/${REPO}"
 SSH_KEY_TYPE=${SSH_KEY_TYPE:-ed25519}
 SSH_KEY_PATH=$HOME/.ssh/id_$SSH_KEY_TYPE
 
@@ -97,15 +98,13 @@ install_packages_for_ansible() {
 
 # Clone my GitHub repository
 clone_repo() {
-  if [[ -d "${DEST}/${REPO}" ]]; then
+  if [[ -d "${DIR}" ]]; then
     echo "Repository already exists."
     return
   fi
 
-  mkdir -p $DEST
-  cd $DEST
-
-  git clone git@github.com:${GHUSER}/${REPO}.git
+  git clone git@github.com:${GHUSER}/${REPO}.git ${DIR}
+  cd ${DIR}
 }
 
 # Provision
@@ -114,11 +113,10 @@ provision() {
   #echo "Start provisioning..."
   #ansible-playbook playbook.yml
 
-  local dir="${DEST}/${REPO}"
   echo "Initialization has been completed successfully."
   echo "To start provisioning, run"
   echo
-  echo "  \$ cd ${dir}"
+  echo "  \$ cd ${DIR}"
   echo '  $ GOPATH=~ ansible-playbook playbook.yml'
 }
 
