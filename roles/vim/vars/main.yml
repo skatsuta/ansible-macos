@@ -1,10 +1,15 @@
 ---
-vim_home: ~/.vim
+vim:
+  home: ~/.vim
+  dir:
+    autoload: ~/.vim/autoload
+    colors: ~/.vim/colors
+  color_schemes:
+    # Molokai
+    - url: https://raw.githubusercontent.com/tomasr/molokai/master/colors/molokai.vim
+      file: molokai.vim
 
-# vim-plug
-vim_plug_home: ~/.vim/plugged
-
-# vim color scheme
-vim_color_scheme:
-  url: https://raw.githubusercontent.com/tomasr/molokai/master/colors/molokai.vim
-  name: molokai.vim
+vim_plug:
+  url: https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  file: plug.vim
+  home: '{{ vim.home }}/plugged'
