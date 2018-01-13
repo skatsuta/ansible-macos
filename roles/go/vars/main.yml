@@ -29,7 +29,7 @@ go_pkgs:
     name: gocode
   - path: github.com/onsi/ginkgo/ginkgo
     name: ginkgo
-  - path: github.com/onsi/gomega
+  - path: github.com/onsi/gomega/...
     name: gomega
   - path: github.com/pilu/fresh
     name: fresh
