@@ -1,3 +1,5 @@
 ---
-dotfiles_repo: skatsuta/dotfiles
-dotfiles_dir:  ~/src/github.com/skatsuta/dotfiles
+dotfiles:
+  repo: ssh://git@github.com/skatsuta/dotfiles.git
+  dir: ~/src/github.com/skatsuta/dotfiles
+  creates: ~/.zshrc

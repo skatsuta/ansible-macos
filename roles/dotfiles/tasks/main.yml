@@ -1,14 +1,14 @@
 ---
 - name: clone dotfiles repo
   git:
-    repo: ssh://git@github.com/{{ dotfiles_repo }}.git
-    dest: '{{ dotfiles_dir }}'
+    repo: '{{ dotfiles.repo }}'
+    dest: '{{ dotfiles.dir }}'
   tags: dotfiles-clone
 
 - name: deploy each symlink of dotfiles into $HOME
   command: ./install
   args:
-    chdir: '{{ dotfiles_dir }}'
-    creates: ~/.zshrc
+    chdir: '{{ dotfiles.dir }}'
+    creates: '{{ dotfiles.creates }}'
   tags: dotfiles-symlink
 
