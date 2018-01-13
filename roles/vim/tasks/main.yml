@@ -6,38 +6,28 @@
     install_options: with-lua,with-python3
   tags: vim-install
 
-# Install color schemes
-- name: create colors directory
+- name: prepare necessary directories
   file:
-    path: '{{ vim.dir.colors }}'
+    path: '{{ vim.home }}/{{ item }}'
     state: directory
-    mode: 0755
     recurse: yes
-  tags: vim-install-color-schemes
+    mode: 0755
+  with_items: '{{ vim.dirs }}'
+  tags: vim-prepare-dirs
 
 - name: install color schemes
   get_url:
     url: '{{ item.url }}'
-    dest: '{{ vim.dir.colors }}/{{ item.file }}'
+    dest: '{{ vim.home }}/colors/{{ item.file }}'
   with_items: '{{ vim.color_schemes }}'
   tags: vim-install-color-scheme
-
-# Install Vim-Plug
-- name: create autoload directory
-  file:
-    path: '{{ vim.dir.autoload }}'
-    state: directory
-    mode: 0755
-    recurse: yes
-  tags: vim-install-plug
 
 - name: install Vim-Plug
   get_url:
     url: '{{ vim_plug.url }}'
-    dest: '{{ vim.dir.autoload }}/{{ vim_plug.file }}'
+    dest: '{{ vim.home }}/autoload/{{ vim_plug.file }}'
   tags: vim-install-plug
 
-# Install plugins
 - name: install plugins
   command: vim +PlugInstall +qall
   args:

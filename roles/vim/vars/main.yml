@@ -1,9 +1,9 @@
 ---
 vim:
   home: ~/.vim
-  dir:
-    autoload: ~/.vim/autoload
-    colors: ~/.vim/colors
+  dirs:
+    - autoload
+    - colors
   color_schemes:
     # Molokai
     - url: https://raw.githubusercontent.com/tomasr/molokai/master/colors/molokai.vim
