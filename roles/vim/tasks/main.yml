@@ -12,6 +12,7 @@
     path: '{{ vim_home }}/colors'
     state: directory
     mode: 0755
+    recurse: yes
   tags: vim-install-color-scheme
 
 - name: download color scheme file
@@ -26,6 +27,7 @@
     path: '{{ vim_home }}/autoload'
     state: directory
     mode: 0755
+    recurse: yes
   tags: vim-install-plug
 
 - name: install Vim-Plug
@@ -35,7 +37,7 @@
   tags: vim-install-plug
 
 # Install plugins
-- name: install plugins
+- name: install Vim plugins
   command: vim +PlugInstall +qall
   tags: vim-install-plugins
 
