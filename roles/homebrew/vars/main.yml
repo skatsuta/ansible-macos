@@ -98,7 +98,7 @@ homebrew_cask_packages:
   - intellij-idea-ce
   - iterm2
   - java
-  - karabiner
+  - karabiner-elements
   - kindle
   - macdown
   - macvim
