@@ -39,18 +39,6 @@
 # Install plugins
 - name: install Vim plugins
   command: vim +PlugInstall +qall
-  tags: vim-install-plugins
-
-# Build vimproc.vim if the plugin directory exists
-- stat:
-    path: '{{ vimproc_home }}'
-  register: st
-  tags: vim-build-vimproc
-
-- name: Build vimproc
-  command: make
   args:
-    chdir: '{{ vimproc_home }}'
-    creates: '{{ vimproc_home }}/autoload/{{ vimproc_so }}'
-  tags: vim-build-vimproc
-
+    creates: '{{ vim_plug_home }}'
+  tags: vim-install-plugins
