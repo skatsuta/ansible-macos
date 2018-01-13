@@ -1,11 +1,13 @@
 - name: install Python 3
-  homebrew: name=python3 state=latest
+  homebrew:
+    name: python3
+    state: latest
   tags: python-install
 
 - name: install Python packages
   pip:
-    name="{{ item }}"
-    state=latest
-    executable=pip3
-  with_items: "{{ packages }}"
+    name: '{{ item }}'
+    state: latest
+    executable: pip3
+  with_items: '{{ packages }}'
   tags: python-package-install
