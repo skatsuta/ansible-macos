@@ -1,18 +1,19 @@
 ---
 - name: install Go with cross compilers via Homebrew
   homebrew:
-    name=go
-    state=latest
-    install_options=with-cc-common
+    name: go
+    state: latest
+    install_options: with-cc-common
   tags: go-install
 
 # Check if each binary exists
-- stat: path={{ go_bin_dir }}/{{ item.name }}
+- stat:
+    path: '{{ go_bin_dir }}/{{ item.name }}'
   with_items: '{{ go_pkgs }}'
   register: stat
 
 - name: install packages
-  command: go get -u {{ item.item.path }}
+  command: 'go get -u {{ item.item.path }}'
   with_items: '{{ stat.results }}'
   when:
     - not item | skipped
