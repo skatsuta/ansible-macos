@@ -4,6 +4,11 @@ vim_home: ~/.vim
 # vim-plug
 vim_plug_home: ~/.vim/plugged
 
+# vim color scheme
+vim_color_scheme:
+  url: https://raw.githubusercontent.com/tomasr/molokai/master/colors/molokai.vim
+  name: molokai.vim
+
 # vimproc
 vimproc_home: ~/.vim/plugged/vimproc.vim
 vimproc_so: vimproc_mac.so

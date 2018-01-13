@@ -6,6 +6,20 @@
     install_options=with-lua,with-python3
   tags: vim-install
 
+# Install color scheme
+- name: ensure colors directory exists
+  file:
+    path: '{{ vim_home }}/colors'
+    state: directory
+    mode: 0755
+  tags: vim-install-color-scheme
+
+- name: download color scheme file
+  get_url:
+    url: '{{ vim_color_scheme.url }}'
+    dest: '{{vim_home}}/colors/{{ vim_color_scheme.name }}'
+  tags: vim-install-color-scheme
+
 # Install Vim-Plug
 - name: create autoload directory
   file:
