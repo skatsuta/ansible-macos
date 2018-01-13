@@ -1,13 +1,13 @@
 ---
 - name: install Lua-enabled Vim via Homebrew
   homebrew:
-    name=vim
-    state=latest
-    install_options=with-lua,with-python3
+    name: vim
+    state: latest
+    install_options: with-lua,with-python3
   tags: vim-install
 
 # Install color scheme
-- name: ensure colors directory exists
+- name: create colors directory
   file:
     path: '{{ vim_home }}/colors'
     state: directory
@@ -23,35 +23,32 @@
 # Install Vim-Plug
 - name: create autoload directory
   file:
-    path={{ vim_home }}/autoload
-    state=directory
+    path: '{{ vim_home }}/autoload'
+    state: directory
+    mode: 0755
   tags: vim-install-plug
 
 - name: install Vim-Plug
   get_url:
-    url=https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-    dest={{ vim_home }}/autoload/plug.vim
+    url: https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    dest: '{{ vim_home }}/autoload/plug.vim'
   tags: vim-install-plug
 
 # Install plugins
-- stat: path={{ vim_plug_home }}
-  register: st
-  tags: vim-install-plugins
-
 - name: install plugins
-  command: vim +PlugUpdate +qall
-  when: st.stat.exists == True
+  command: vim +PlugInstall +qall
   tags: vim-install-plugins
 
 # Build vimproc.vim if the plugin directory exists
-- stat: path={{ vimproc_home }}
+- stat:
+    path: '{{ vimproc_home }}'
   register: st
   tags: vim-build-vimproc
 
 - name: Build vimproc
   command: make
-    chdir={{ vimproc_home }}
-    creates={{ vimproc_home }}/autoload/{{ vimproc_so }}
-  when: st.stat.exists == True
+  args:
+    chdir: '{{ vimproc_home }}'
+    creates: '{{ vimproc_home }}/autoload/{{ vimproc_so }}'
   tags: vim-build-vimproc
 
