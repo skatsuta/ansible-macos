@@ -7,9 +7,9 @@
   tags: go-install
 
 - name: install packages
-  command: 'go get -u {{ item.path }}'
+  command: 'go get -u {{ item }}'
   args:
     # Trim trailing '/...'
-    creates: '{{ lookup("env", "GOPATH") }}/src/{{ item.path | regex_replace("/\.\.\.$", "") }}'
-  with_items: '{{ go_pkgs }}'
+    creates: '{{ lookup("env", "GOPATH") }}/src/{{ item | regex_replace("/\.\.\.$", "") }}'
+  with_items: '{{ go.pkgs }}'
   tags: go-pkg-install
