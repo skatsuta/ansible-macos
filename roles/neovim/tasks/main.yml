@@ -23,6 +23,13 @@
   with_items: '{{ neovim.color_schemes }}'
   tags: neovim-install-color-scheme
 
+- name: install Python client for Neovim
+  pip:
+    name: neovim
+    state: latest
+    executable: pip3
+  tags: neovim-install-python
+
 - name: install Vim-Plug
   get_url:
     url: '{{ vim_plug.url }}'
