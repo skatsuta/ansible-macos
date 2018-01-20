@@ -5,6 +5,8 @@
       tags: dotfiles
     - role: zsh
       tags: zsh
+    - role: neovim
+      tags: neovim
     - role: vim
       tags: vim
     - role: homebrew

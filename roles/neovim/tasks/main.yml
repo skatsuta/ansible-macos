@@ -1,0 +1,36 @@
+---
+- name: install Neovim via Homebrew
+  homebrew:
+    name: neovim
+    state: latest
+  tags: neovim-install
+
+- name: prepare necessary directories
+  file:
+    path: '{{ item }}'
+    state: directory
+    recurse: yes
+    mode: 0755
+  with_items:
+    - '{{ neovim.autoload }}'
+    - '{{ neovim.colors }}'
+  tags: neovim-prepare-dirs
+
+- name: install color schemes
+  get_url:
+    url: '{{ item.url }}'
+    dest: '{{ neovim.colors }}/{{ item.file }}'
+  with_items: '{{ neovim.color_schemes }}'
+  tags: neovim-install-color-scheme
+
+- name: install Vim-Plug
+  get_url:
+    url: '{{ vim_plug.url }}'
+    dest: '{{ neovim.autoload }}/{{ vim_plug.file }}'
+  tags: neovim-install-plug
+
+- name: install plugins
+  command: nvim +PlugInstall +qall
+  args:
+    creates: '{{ vim_plug.home }}'
+  tags: neovim-install-plugins
