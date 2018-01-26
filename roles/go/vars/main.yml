@@ -25,3 +25,4 @@ go:
     - golang.org/x/tools/cmd/present
     - golang.org/x/tools/cmd/stringer
     - gopkg.in/matm/v1/gocov-html
+    - rsc.io/2fa
