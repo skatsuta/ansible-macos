@@ -1,10 +1,14 @@
 ---
 - name: install nodebrew
   shell: curl -L "{{ nodebrew_url }}" | perl - setup
-    creates={{ nodebrew_home }}/nodebrew
+  args:
+    creates: '{{ nodebrew_home }}/nodebrew'
   tags: nodebrew-install
 
 - name: install npm modules
-  npm: name={{ item }} global=yes
+  npm:
+    name: '{{ item }}'
+    state: latest
+    global: yes
   with_items: '{{ node_modules }}'
   tags: npm-install

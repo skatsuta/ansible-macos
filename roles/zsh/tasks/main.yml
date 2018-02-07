@@ -1,14 +1,16 @@
 ---
 - name: install zsh via Homebrew
-  homebrew: name=zsh state=latest
+  homebrew:
+    name: zsh
+    state: latest
   tags: zsh-install
 
 
 ##### Plugins #####
 - name: install zaw
   git:
-    repo=ssh://git@github.com/{{ item.user }}/{{ item.name }}.git
-    dest={{ zsh_plugin_home }}/{{ item.name }}
+    repo: 'ssh://git@github.com/{{ item.user }}/{{ item.name }}.git'
+    dest: '{{ zsh_plugin_home }}/{{ item.name }}'
   with_items: '{{ zsh_plugins }}'
   tags: zsh-install-plugins
 
@@ -16,16 +18,15 @@
 ###### Configuration framework #####
 - name: install Prezto
   git:
-    repo=ssh://git@github.com/sorin-ionescu/prezto.git
-    dest={{ zsh_prezto_home }}
-    recursive=yes
+    repo: 'ssh://git@github.com/sorin-ionescu/prezto.git'
+    dest: '{{ zsh_prezto_home }}'
+    recursive: yes
   tags: zsh-cfg-fwk
 
 - name: create symlinks to zsh config files
   file:
-    src={{ zsh_prezto_home }}/runcoms/{{ item }}
-    dest=~/.{{ item }}
-    state=link
+    src: '{{ zsh_prezto_home }}/runcoms/{{ item }}'
+    dest: '~/.{{ item }}'
+    state: link
   with_items: '{{ zsh_prezto_config_files }}'
   tags: zsh-cfg-fwk
-

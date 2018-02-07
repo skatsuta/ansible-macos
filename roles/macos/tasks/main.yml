@@ -1,12 +1,12 @@
 ---
 - name: Configure macOS defaults
-  osx_defaults: >
-    domain={{ item.domain }}
-    host={{ item.host | default(omit) }}
-    key={{ item.key }}
-    type={{ item.type }}
-    value={{ item.value }}
-    state=present
+  osx_defaults:
+    domain: '{{ item.domain }}'
+    host: '{{ item.host | default(omit) }}'
+    key: '{{ item.key }}'
+    type: '{{ item.type }}'
+    value: '{{ item.value }}'
+    state: present
   # default(omit): see http://docs.ansible.com/ansible/playbooks_filters.html#omitting-parameters
-  notify: "{{ item.notify | default(omit) }}"
-  with_items: "{{ macos_defaults }}"
+  notify: '{{ item.notify | default(omit) }}'
+  with_items: '{{ macos_defaults }}'

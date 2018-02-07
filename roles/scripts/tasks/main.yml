@@ -1,13 +1,14 @@
 ---
 - name: clone scripts repo
   git:
-    repo=ssh://git@github.com/{{ scripts_repo }}.git
-    dest={{ scripts_dir }}
+    repo: 'ssh://git@github.com/{{ scripts_repo }}.git'
+    dest: '{{ scripts_dir }}'
   tags: scripts-clone
 
 - name: deploy each symlink of scripts into the target directory
   command: ./install
-    chdir={{ scripts_dir }}
-    creates={{ target_dir }}/bu
+  args:
+    chdir: '{{ scripts_dir }}'
+    creates: '{{ target_dir }}/bu'
   tags: scripts-symlink
 
