@@ -11,4 +11,3 @@
     state: latest
   with_items: '{{ gems }}'
   tags: ruby-gem-install
-
