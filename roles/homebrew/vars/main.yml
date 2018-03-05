@@ -9,8 +9,6 @@ homebrew:
     - aws-shell
     - awscli
     - bash
-    - bats
-    - ccat
     - cheat
     - cmake
     - coreutils
@@ -64,7 +62,6 @@ homebrew:
     - ruby
     - ruby-build
     - rust
-    - scala
     - ssh-copy-id
     - terminal-notifier
     - terraform
@@ -74,7 +71,6 @@ homebrew:
     - tig
     - tmux
     - tree
-    - typesafe-activator
     - vitorgalvao/tiny-scripts/cask-repair
     - wallix/awless/awless
     - wget
@@ -86,7 +82,6 @@ homebrew:
     - adobe-acrobat-reader
     - alfred
     - appcleaner
-    - coderunner
     - dash
     - docker
     - dropbox
