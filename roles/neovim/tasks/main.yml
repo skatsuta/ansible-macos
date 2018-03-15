@@ -21,6 +21,12 @@
     state: latest
   tags: neovim-install-ruby
 
+- name: install Node
+  homebrew:
+    name: node
+    state: latest
+  tags: neovim-install-node
+
 - name: install Node provider
   npm:
     name: neovim
@@ -60,7 +66,7 @@
   tags: neovim-install-plug
 
 - name: install plugins
-  command: nvim +PlugInstall +qall
+  command: nvim +UpdateRemotePlugins +PlugInstall +qall
   args:
     creates: '{{ vim_plug.home }}'
   tags: neovim-install-plugins
