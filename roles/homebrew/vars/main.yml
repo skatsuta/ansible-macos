@@ -87,6 +87,7 @@ homebrew:
     - dropbox
     - goland
     - google-backup-and-sync
+    - google-cloud-sdk
     - google-chrome
     - google-japanese-ime
     - intellij-idea-ce
