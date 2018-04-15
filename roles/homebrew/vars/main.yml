@@ -5,6 +5,7 @@ homebrew:
     - buo/cask-upgrade # useful to upgrade casks
   formula:
     - ansible
+    - aria2
     - autojump
     - aws-shell
     - awscli
