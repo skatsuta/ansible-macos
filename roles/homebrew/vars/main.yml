@@ -49,12 +49,10 @@ homebrew:
     - nkf
     - node
     - openssl
-    - packer
     - peco
     - pipenv
     - pyenv
     - python
-    - q
     - rbenv
     - reattach-to-user-namespace
     - redis
@@ -66,6 +64,7 @@ homebrew:
     - ssh-copy-id
     - terminal-notifier
     - terraform
+    - textql
     - the_platinum_searcher
     - the_silver_searcher
     - thefuck
@@ -95,7 +94,6 @@ homebrew:
     - intellij-idea-ce
     - iterm2
     - java
-    - karabiner-elements
     - kindle
     - macdown
     - macvim
@@ -106,5 +104,4 @@ homebrew:
     - spectacle
     - sublime-text
     - the-unarchiver
-    - vagrant
     - vlc
