@@ -10,6 +10,7 @@ homebrew:
     - aws-shell
     - awscli
     - bash
+    - bat
     - cheat
     - cmake
     - coreutils
