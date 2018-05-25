@@ -80,7 +80,6 @@ homebrew:
     - zsh
   casks:
     - a-better-finder-rename
-    - adobe-acrobat-reader
     - alfred
     - appcleaner
     - authy
