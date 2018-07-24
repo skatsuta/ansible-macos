@@ -103,5 +103,6 @@ homebrew:
     - slack
     - spectacle
     - sublime-text
+    - teensy
     - the-unarchiver
     - vlc
