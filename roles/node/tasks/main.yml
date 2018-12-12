@@ -1,9 +1,11 @@
 ---
-- name: install nodebrew
-  shell: curl -L "{{ nodebrew_url }}" | perl - setup
+- name: install nvm
+  shell: curl -o- "{{ nvm_installer_url }}" | bash
   args:
-    creates: '{{ nodebrew_home }}/nodebrew'
-  tags: nodebrew-install
+    creates: '{{ nvm_home }}'
+    # Ignore warning that says "Use get_url instead of curl!"
+    warn: no
+  tags: nvm-install
 
 - name: install npm modules
   npm:
