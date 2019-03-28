@@ -1,4 +1,5 @@
 packages:
   - flake8
+  - isort
   - neovim
   - yapf
