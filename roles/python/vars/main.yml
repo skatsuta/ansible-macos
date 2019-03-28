@@ -1,3 +1,4 @@
 packages:
+  - flake8
   - neovim
   - yapf
