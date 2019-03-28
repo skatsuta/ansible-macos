@@ -6,8 +6,7 @@
 
 - name: install Python packages
   pip:
-    name: '{{ item }}'
+    name: '{{ packages }}'
     state: latest
     executable: pip3
-  with_items: '{{ packages }}'
   tags: python-package-install
