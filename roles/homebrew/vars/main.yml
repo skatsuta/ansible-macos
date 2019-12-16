@@ -95,7 +95,6 @@ homebrew:
     - iterm2
     - java
     - kindle
-    - macdown
     - macvim
     - omnidisksweeper
     - sequel-pro
@@ -105,4 +104,5 @@ homebrew:
     - sublime-text
     - teensy
     - the-unarchiver
+    - typora
     - vlc
