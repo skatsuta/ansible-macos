@@ -1,5 +1,4 @@
----
-- hosts: macos-machine
+- hosts: macos
   roles:
     - role: dotfiles
       tags: dotfiles
