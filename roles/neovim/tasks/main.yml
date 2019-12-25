@@ -1,11 +1,10 @@
 ---
 - name: install Neovim via Homebrew
   homebrew:
-    name: '{{ item }}'
+    name:
+      - neovim
+      - python3
     state: latest
-  with_items:
-    - neovim
-    - python3
   tags: neovim-install
 
 - name: install Python provider

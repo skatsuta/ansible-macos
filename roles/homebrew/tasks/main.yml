@@ -6,21 +6,18 @@
 
 - name: tap extra repositories
   homebrew_tap:
-    tap: '{{ item }}'
+    tap: '{{ homebrew.taps }}'
     state: present
-  with_items: '{{ homebrew.taps }}'
   tags: homebrew-tap
 
 - name: install Homebrew Casks
   homebrew_cask:
-    name: '{{ item }}'
+    name: '{{ homebrew.casks }}'
     state: present
-  with_items: '{{ homebrew.casks }}'
   tags: homebrew-cask-install
 
 - name: install Homebrew formula
   homebrew:
-    name: '{{ item }}'
+    name: '{{ homebrew.formula }}'
     state: latest
-  with_items: '{{ homebrew.formula }}'
   tags: homebrew-install
