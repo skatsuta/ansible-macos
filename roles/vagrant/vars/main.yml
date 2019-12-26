@@ -1,7 +1,0 @@
----
-vagrant_plugins:
-  - sahara
-  - vagrant-cachier
-  - vagrant-omnibus
-  - vagrant-vbguest
-  - vagrant-vbox-snapshot

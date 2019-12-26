@@ -18,8 +18,6 @@
       tags: ruby
     - role: go
       tags: go
-    - role: vagrant
-      tags: vagrant
     - role: fzf
       tags: fzf
     - role: python
