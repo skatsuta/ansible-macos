@@ -1,4 +1,11 @@
 ---
+- name: create a directory for nvm
+  file:
+    path: '{{ nvm_home }}'
+    state: directory
+    mode: '0755'
+  tags: nvm-install
+
 - name: install nvm
   shell: curl -o- "{{ nvm_installer_url }}" | bash
   args:
