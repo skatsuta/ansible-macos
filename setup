@@ -117,7 +117,7 @@ provision() {
   echo "To start provisioning, run"
   echo
   echo "  \$ cd ${DIR}"
-  echo '  $ GOPATH=~ ansible-playbook playbook.yml'
+  echo '  $ ansible-playbook playbook.yml'
 }
 
 # Run the above functions
