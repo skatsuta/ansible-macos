@@ -26,6 +26,7 @@ homebrew:
     - git-flow
     - git-secrets
     - gnu-sed
+    - golangci/tap/golangci-lint
     - grip
     - httpie
     - hub
