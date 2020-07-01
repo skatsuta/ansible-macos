@@ -29,6 +29,7 @@ homebrew:
     - golangci/tap/golangci-lint
     - grip
     - httpie
+    - htop
     - hub
     - icdiff
     - jid
