@@ -1,6 +1,6 @@
 ---
 macos_defaults:
-  #===== Global settings =====
+  #===== Global Settings =====
   # Make key repeat fastest
   - domain: NSGlobalDomain
     key: InitialKeyRepeat
@@ -33,7 +33,7 @@ macos_defaults:
     value: 3
 
 
-  #===== Finder =====
+  #===== Software Update =====
   # Check for software update daily, not once per week
   - domain: com.apple.SoftwareUpdate
     key: ScheduleFrequency
@@ -142,3 +142,11 @@ macos_defaults:
     key: askForPasswordDelay
     type: float
     value: 5
+
+
+  #===== Visual Studio Code =====
+  # Disable the Apple press and hold for VSCode
+  - domain: com.microsoft.VSCode
+    key: ApplePressAndHoldEnabled
+    type: bool
+    value: false
