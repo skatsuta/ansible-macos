@@ -47,6 +47,7 @@ homebrew:
     - openssl
     - peco
     - pipenv
+    - prettier
     - pyenv
     - python
     - rbenv

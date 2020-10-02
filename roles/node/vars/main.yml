@@ -8,5 +8,4 @@ node_modules:
   - jsonlint
   - node-gyp
   - npm-check-updates
-  - prettier
   - tldr
