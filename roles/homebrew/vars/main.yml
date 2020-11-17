@@ -38,7 +38,6 @@ homebrew:
     - legit
     - llvm
     - maven
-    - m-cli
     - mycli
     - mysql
     - neovim
