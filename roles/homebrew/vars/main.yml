@@ -9,6 +9,7 @@ homebrew:
     - awscli
     - bash
     - bat
+    - black
     - cheat
     - cmake
     - coreutils
