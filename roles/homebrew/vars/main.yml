@@ -71,7 +71,6 @@ homebrew:
     - wrk
     - zsh
   casks:
-    - a-better-finder-rename
     - alfred
     - appcleaner
     - authy
