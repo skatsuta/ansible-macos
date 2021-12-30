@@ -7,7 +7,7 @@
   tags: go-install
 
 - name: install packages
-  command: 'go get -u {{ item }}'
+  command: 'go install {{ item }}@latest'
   args:
     # Trim trailing '/...'
     creates: '{{ lookup("env", "GOPATH") }}/src/{{ item | regex_replace("/\.\.\.$", "") }}'
