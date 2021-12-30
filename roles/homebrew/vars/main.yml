@@ -33,6 +33,7 @@ homebrew:
     - htop
     - hub
     - icdiff
+    - java
     - jid
     - jq
     - knqyf263/pet/pet
@@ -84,7 +85,6 @@ homebrew:
     - google-japanese-ime
     - intellij-idea-ce
     - iterm2
-    - java
     - kindle
     - omnidisksweeper
     - sequel-ace
