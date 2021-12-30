@@ -86,6 +86,15 @@ install_homebrew() {
   echo "Installing Homebrew..."
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
+  echo "Adding environment variables to $HOME/.zprofile..."
+  local homebrew_home=/usr/local
+  if [[ $(sysctl -n machdep.cpu.brand_string) =~ 'Apple' ]]; then
+    homebrew_home=/opt/homebrew
+  fi
+  echo '# Homebrew' >> $HOME/.zprofile
+  echo 'eval $('${homebrew_home}'/bin/brew shellenv)' >> $HOME/.zprofile
+  eval $(${homebrew_home}/bin/brew shellenv)
+
   echo "Running 'brew doctor'..."
   brew doctor
 }
