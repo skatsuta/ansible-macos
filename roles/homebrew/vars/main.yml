@@ -15,16 +15,13 @@ homebrew:
     - coreutils
     - ctags
     - curl
-    - dep
     - devd
     - diff-so-fancy
     - direnv
     - exa
     - fd
-    - fpp
     - ghq
     - git
-    - git-flow
     - git-secrets
     - gnu-sed
     - golangci-lint
@@ -39,9 +36,7 @@ homebrew:
     - knqyf263/pet/pet
     - legit
     - llvm
-    - maven
     - mycli
-    - mysql
     - neovim
     - nkf
     - node
@@ -53,7 +48,6 @@ homebrew:
     - python
     - rbenv
     - reattach-to-user-namespace
-    - redis
     - remarshal
     - ripgrep
     - ruby
@@ -61,15 +55,10 @@ homebrew:
     - rust
     - ssh-copy-id
     - terminal-notifier
-    - textql
-    - thefuck
     - tig
-    - tmux
     - tree
     - vitorgalvao/tiny-scripts/cask-repair
-    - wallix/awless/awless
     - wget
-    - wrk
     - zsh
   casks:
     - alfred
@@ -88,7 +77,6 @@ homebrew:
     - kindle
     - omnidisksweeper
     - sequel-ace
-    - skype
     - slack
     - spectacle
     - stats
