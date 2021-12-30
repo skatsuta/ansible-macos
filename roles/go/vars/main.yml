@@ -2,7 +2,6 @@
 go:
   pkgs:
     - github.com/Alistanis/st
-    - github.com/alecthomas/gometalinter
     - github.com/axw/gocov/gocov
     - github.com/go-bootstrap/go-bootstrap
     - github.com/jstemmer/gotags
@@ -18,11 +17,8 @@ go:
     - github.com/pilu/fresh
     - github.com/pquerna/ffjson
     - github.com/rogpeppe/godef
-    - github.com/tools/godep
-    - golang.org/x/lint/golint
     - golang.org/x/tools/cmd/goimports
     - golang.org/x/tools/cmd/gorename
     - golang.org/x/tools/cmd/present
     - golang.org/x/tools/cmd/stringer
-    - gopkg.in/matm/v1/gocov-html
     - rsc.io/2fa
