@@ -21,6 +21,7 @@ homebrew:
     - eslint
     - exa
     - fd
+    - flake8
     - ghq
     - git
     - git-secrets
