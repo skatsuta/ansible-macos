@@ -31,6 +31,7 @@ homebrew:
     - htop
     - hub
     - icdiff
+    - isort
     - java
     - jid
     - jq
