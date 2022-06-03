@@ -46,6 +46,7 @@ homebrew:
     - pipenv
     - prettier
     - pyenv
+    - pyright
     - python
     - rbenv
     - reattach-to-user-namespace
