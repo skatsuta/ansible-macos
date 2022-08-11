@@ -71,6 +71,7 @@ homebrew:
     - dash
     - docker
     - dropbox
+    - evernote
     - goland
     - google-cloud-sdk
     - google-chrome
