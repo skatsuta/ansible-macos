@@ -4,13 +4,13 @@ macos_defaults:
   # Make key repeat fastest
   - domain: NSGlobalDomain
     key: InitialKeyRepeat
-    type: int
+    type: float
     value: 10
 
   # Make key repeat fastest
   - domain: NSGlobalDomain
     key: KeyRepeat
-    type: int
+    type: float
     value: 1
 
   # Do not upload documents to iCloud
