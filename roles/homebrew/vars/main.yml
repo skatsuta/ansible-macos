@@ -18,7 +18,7 @@ homebrew:
     - diff-so-fancy
     - direnv
     - eslint
-    - exa
+    - eza
     - fd
     - flake8
     - ghq
