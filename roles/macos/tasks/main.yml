@@ -10,3 +10,22 @@
   # default(omit): see http://docs.ansible.com/ansible/playbooks_filters.html#omitting-parameters
   notify: '{{ item.notify | default(omit) }}'
   with_items: '{{ macos_defaults }}'
+
+# Setting up sudo authentication with Touch ID
+
+- name: Prepare sudo_local file
+  ansible.builtin.copy:
+    src: /etc/pam.d/sudo_local.template
+    dest: /etc/pam.d/sudo_local
+    remote_src: true
+    mode: '0644'
+    force: false
+  become: true
+
+- name: Uncomment auth line in sudo_local
+  ansible.builtin.lineinfile:
+    path: /etc/pam.d/sudo_local
+    regexp: '^#auth(.*)$'
+    line: 'auth\1'
+    backrefs: true
+  become: true
