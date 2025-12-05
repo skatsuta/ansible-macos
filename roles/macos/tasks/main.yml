@@ -1,6 +1,6 @@
 ---
 - name: Configure macOS defaults
-  osx_defaults:
+  community.general.osx_defaults:
     domain: '{{ item.domain }}'
     host: '{{ item.host | default(omit) }}'
     key: '{{ item.key }}'
