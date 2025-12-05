@@ -46,7 +46,7 @@ macos_defaults:
   - domain: com.apple.finder
     key: NewWindowTargetPath
     type: string
-    value: 'file://{{ ansible_user_dir }}/Dropbox/'
+    value: 'file://{{ ansible_facts["user_dir"] }}/'
     notify: Restart Finder
 
   # Show mounted servers on desktop
